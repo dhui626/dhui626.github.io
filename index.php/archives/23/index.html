@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Jellyfin 折腾记录 - dhui's Blog</title>
+    <meta name="author" content="dhui" />
+    <meta name="description" content="Jellyfin 个人媒体库搭建记录" />
+    <meta property="og:title" content="Jellyfin 折腾记录 - dhui's Blog" />
+    <meta property="og:description" content="Jellyfin 个人媒体库搭建记录" />
+    <meta property="og:site_name" content="Jellyfin 折腾记录 - dhui's Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dhui626.github.io/index.php/archives/23/" />
+    <meta property="og:image" content="https://dhui626.github.io/pics/Kimi no Tonari de.jpg" />
+    <meta property="article:published_time" content="2023-10-28T16:57:00+00:00" />
+    <meta property="article:modified_time" content="2023-10-29T12:29:38+00:00" />
+    <meta name="twitter:title" content="Jellyfin 折腾记录 - dhui's Blog" />
+    <meta name="twitter:description" content="Jellyfin 个人媒体库搭建记录" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:image" content="https://dhui626.github.io/pics/Kimi no Tonari de.jpg" />
+    <meta name="generator" content="Typecho 1.2.1" />
+<meta name="template" content="VOID-nightly" />
+<link rel="pingback" href="https://dhui626.github.io/index.php/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dhui626.github.io/index.php/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dhui626.github.io/index.php/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="Jellyfin 折腾记录 &raquo; dhui's Blog &raquo; RSS 2.0" href="https://dhui626.github.io/index.php/feed/archives/23/" />
+<link rel="alternate" type="application/rdf+xml" title="Jellyfin 折腾记录 &raquo; dhui's Blog &raquo; RSS 1.0" href="https://dhui626.github.io/index.php/feed/rss/archives/23/" />
+<link rel="alternate" type="application/atom+xml" title="Jellyfin 折腾记录 &raquo; dhui's Blog &raquo; ATOM 1.0" href="https://dhui626.github.io/index.php/feed/atom/archives/23/" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-1e9bf597b1.css">
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-505617232e.css">
+
+    <!--JS-->
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-header-c3f7d82f38.js"></script>
+    <script>
+    VOIDConfig = {
+        PJAX : false,
+        searchBase : "https://dhui626.github.io/index.php/search/",
+        home: "https://dhui626.github.io/index.php/",
+        buildTime : "2023-10-26T14:49",
+        enableMath : true,
+        lazyload : true,
+        colorScheme:  0,
+        headerMode: 1,
+        followSystemColorScheme: false,
+        browserLevelLoadingLazy: false,
+        VOIDPlugin: true,
+        votePath: "https://dhui626.github.io/index.php/action/void?",
+        lightBg: "",
+        darkBg: "",
+        lineNumbers: true,
+        darkModeTime: {
+            'start': 22.5,
+            'end': 7        },
+        horizontalBg: false,
+        verticalBg: false,
+        indexStyle: 0,
+        version: 3.51,
+        isDev: true
+    }
+    </script>
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/header-fd3209d155.js"></script>
+    
+        <style>
+                @media screen and (min-width: 768px){
+            main>.lazy-wrap{min-height: 70vh;}
+        }
+        
+                @media screen and (max-width: 768px){
+            main>.lazy-wrap{min-height: 100vh;}
+        }
+            </style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    
+    
+    </head>
+
+<body fontsize="3" class=" macStyleCodeBlock line-numbers lazyload-img">
+    
+    <header class="header-mode-1 ">
+        <div class="container wider">
+            <nav>
+                <a role=button aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
+                    <span></span>
+                </a>
+                <a class="brand" href="https://dhui626.github.io/index.php/">dhui6026</a>
+                <a href="https://dhui626.github.io/index.php/">首页</a>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>                <span class="dropdown">分类
+                    <ul>
+                        <li><a href="https://dhui626.github.io/index.php/category/default/">默认分类</a></li><li><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a></li><li><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a></li>                    </ul>
+                </span>
+                                                    <span class="hidden-xs search-form-desktop">
+                        <label for="search">搜索</label>
+                        <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search" required />
+                    </span>
+                                <a  
+                    role=button aria-label="展开搜索" id="toggle-mobile-search" target="_self" 
+                    href="javascript:void(0);" 
+                    onclick="VOID_Ui.toggleSearch(this);">
+                    <i class="voidicon-search"></i>
+                </a>
+                <a target="_self" href="javascript:void(0);" id="toggle-setting" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </nav>
+        </div>
+        <div class="mobile-search-form">
+            <label for="search_new">搜索</label>
+            <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search_new" required placeholder="输入内容然后 Go!" />
+            <button onclick="VOID.startSearch('#search_new');">Go!</button>
+        </div>
+    </header>
+    <div id="nav-mobile">
+        <section id="pages" data-title="PAGES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>            </nav>
+        </section>
+        <section id="categories" data-title="CATEGORIES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/category/default/">默认分类</a><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a>            </nav>
+        </section>
+            </div>
+<main id="pjax-container">
+    <title hidden>
+        Jellyfin 折腾记录 - dhui's Blog    </title>
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "dhui's Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=200&amp;r=&amp;d="
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "dhui",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=400&amp;r=&amp;d=",
+            "width": 400,
+            "height": 400
+        },
+        "url": "https://dhui626.github.io/index.php/author/1/"
+    },
+    "headline": "Jellyfin 折腾记录 - dhui's Blog",
+    "url": "https://dhui626.github.io/index.php/archives/23/",
+    "datePublished": "2023-10-28T16:57:00+00:00",
+    "dateModified": "2023-10-29T12:29:38+00:00",
+    "image": {
+        "@type": "ImageObject",
+                "url": "https://dhui626.github.io/pics/Kimi no Tonari de.jpg"
+    },
+    "description": "Jellyfin 个人媒体库搭建记录",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://dhui626.github.io/index.php/"
+    }
+}
+</script>
+    
+<div class="lazy-wrap
+     loading dark">
+
+            <div id="banner" class="">
+                                            <img class="lazyload" data-src="https://dhui626.github.io/pics/Kimi no Tonari de.jpg">
+                    </div>
+        <script>$('body>header').removeClass('force-dark').removeClass('no-banner');</script>
+    
+            <div class="banner-title">
+            <h1 class="post-title">
+                                    Jellyfin 折腾记录                            </h1>
+                            <p class="post-meta">
+                                            <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
+                        <time datetime="2023-10-28T16:57:00+00:00">2023-10-28</time>
+                        &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
+                        &nbsp;•&nbsp;<span>59&nbsp;阅读</span>                                                            </p>
+                    </div>
+    </div>
+    <div class="wrapper container">
+        <div class="contents-wrap"> <!--start .contents-wrap-->
+            <section id="post" class="float-up">
+                <article class="post yue">
+
+                    
+                    <div class="articleBody" class="full">
+                        <p>运行环境：Windows 10 22H2 x64 + Jellyfin Server 10.8.11</p><h2 id="toc_0">介绍</h2><p><a href="https://jellyfin.org/">Jellyfin官网</a> + <a href="https://jellyfin.org/docs/">文档</a></p><p>查看官网介绍，本应用是一种媒体存储方案，并附加共享功能，可以搭建自己的媒体服务器网络。该应用具有多平台支持，只要有浏览器即可。该软件免费，now and always。</p><h2 id="toc_1">安装</h2><p><a href="https://www.himiku.com/archives/deploy-a-more-comfortable-animation-library-with-jellyfin-and-bangumi.html">利用 Jellyfin + Bangumi 打造更舒适的动画媒体库</a></p><p>安装后的设置可参考如上文章，笔者在安装结束之后才看到本文。</p><p>密码可以留空。</p><p>转码设置默认也行，博客作者建议全部勾选。</p><p><strong>插件安装</strong>：「插件 - 存储库」点击加号，添加如下网址：</p><pre><code>https://jellyfin-plugin-bangumi.pages.dev/repository.json</code></pre><p>然后在「插件 - 目录 - 元数据」找到 Bangumi 插件安装，重启 Jellyfin</p><h2 id="toc_2">媒体库设置</h2><p><strong>动画</strong>：内容类型选择「节目」</p><p>命名规则：将文件名加上 Season 和 Episode 信息。</p><p>示例：</p><pre><code>Shows
+├── Series (2010)
+│   ├── Season 00
+│   │   ├── Some Special.mkv
+│   │   ├── Episode S00E01.mkv
+│   │   └── Episode S00E02.mkv
+│   ├── Season 01
+│   │   ├── Episode S01E01-E02.mkv
+│   │   ├── Episode S01E03.mkv
+│   │   └── Episode S01E04.mkv
+│   └── Season 02
+│       ├── Episode S02E01.mkv
+│       ├── Episode S02E02.mkv
+│       ├── Episode S02E03 Part 1.mkv
+│       └── Episode S02E03 Part 2.mkv
+└── Series (2018)
+    ├── Episode S01E01.mkv
+    ├── Episode S01E02.mkv
+    ├── Episode S02E01-E02.mkv
+    └── Episode S02E03.mkv</code></pre><p>重命名教程：</p><p>利用 Renamer Pro 的插入 + 序列化功能。</p><p>@miracle 的建议：不需要重命名，Jellyfin会自动识别。且若文件夹名和种子文件相同，还可以做种。</p><p>但根据测试，季度信息文件夹，如多季度番剧的 S01~S0x 文件夹还是需要创建并拖进相应视频的。 </p><p><strong>电影</strong>：内容类型选择「电影」</p><p>三次元电影 bangumi 索引不到，可以提高 tmdb 的优先级。</p><p>ass 字幕出现方块字：播放 - 备用字体文件路径</p><p><strong>漫画</strong>：内容类型选择「照片」</p><p>添加相应的文件夹后需要手动扫描媒体库，以获得漫画封面信息。</p><p><strong>书籍</strong>：内容类型选择「书籍」</p><p>能识别 epub 但不能识别 txt 文件，需要手动转换。且 epub 不会生成封面。</p><p><strong>音乐</strong>：内容类型选择「音乐」</p><p>建议按专辑建立文件夹存放。</p><h2 id="toc_3">服务器建立</h2><p><a href="http://www.test-ipv6.com/">测试 IPv6 连接</a> </p><p>Jellyfin 联网设置中开启 IPv4, IPv6 功能。</p><p>如果运气很好，网络环境有公网 IPv4，可以用 http://[IPv4地址]:8096/ 访问。</p><p>如果设置得当，网络环境有公网 IPv6，可以用 http://[IPv6地址]:8096/ 访问。</p><p>目前大部分网络没有 IPv4，但支持打开 IPv6，需在路由器中设置。</p><p>而有些学校的宿舍网络并不支持 IPv6，更别说 IPv4 了，有如下两种解决办法：</p><ul><li>使用流量网络（这总支持 IPv6 了吧，不行的话直接 call 运营商总部）</li><li>反向代理</li></ul><p>反向代理设置教程：</p><p><strong>使用 frp</strong>：需要有 VPS（没有，遂搁置）</p><p>教程：<a href="https://sspai.com/post/52523">使用frp进行内网穿透</a>    <a href="https://moe.best/tutorial/frp.html">frp 内网穿透神器搭建 萌新也看得懂的教程系列</a></p><p><strong>使用 SakuraFrp</strong>：</p><p>注册登录下载安装，一气呵成。</p><p>参考教程：<a href="https://doc.natfrp.com/app/http.html">HTTP(S) 协议穿透指南</a></p><p>隧道类型选 TCP，海外节点支持 http 协议，但会经常断线重连，故选择内地节点。</p><p>新建穿透隧道 - 输入本地 ip 和端口 - 选择穿透结点（ping一下）- 创建</p><p>内地节点 + http 无法正常访问：隧道列表 - 编辑 - 打开自动 HTTPS </p><p>Chrome 浏览器会提示连接不安全。</p><p>这不对劲，虽然已经实现目标了，但不安全</p><p><strong>Jellyfin 开启 https 访问</strong>：</p><p>没有 ssl 证书咋整啊？可以自建。<a href="https://blog.csdn.net/qq243920161/article/details/119963501">参考</a></p><p>下载 openssl：<a href="https://slproweb.com/products/Win32OpenSSL.html">Win32/Win64 OpenSSL Installer for Windows - Shining Light Productions</a></p><p>若安装步骤中未勾选 Copy OpenSSL DLLs to: The Windows system directory，需要手动添加环境变量。</p><p>生成私钥文件</p><pre><code>openssl genrsa -des3 -out localhost.key 2048</code></pre><p>去除口令</p><pre><code>openssl rsa -in localhost.key -out localhost.key</code></pre><p>创建请求证书</p><pre><code>openssl req -new -key localhost.key -out localhost.csr</code></pre><p>生成证书</p><pre><code>openssl x509 -req -days 36500 -in localhost.csr -signkey localhost.key -out localhost.crt</code></pre><p>这样就生成了三个文件：</p><pre><code>localhost.crt
+localhost.csr
+localhost.key</code></pre><p>然后将证书文件转换为 Jellyfin 能读取的 PFX 文件：<a href="https://www.ssldun.com/tools/ssl-converter.php">网站1</a> <a href="https://www.chinassl.net/ssltools/convert-ssl.html">网站2</a></p><p>Jellyfin 控制台 - 联网 - 启用 HTTPS + 自定义 SSL证书路径（选择刚才转换完成的 pfx 文件）。</p><p>但 Chrome 打开网站还是会显示不安全！但至少能用了。</p><p>安全证书颁发方法：使用 Active Directory 证书服务 <a href="https://www.tangyuecan.com/2021/12/17/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%86%85%E6%90%AD%E5%BB%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%AF%E4%BF%A1%E4%BB%BB%E7%9A%84ssl%E8%AF%81%E4%B9%A6/">教程</a> 。</p><p>参考这篇文章？<a href="https://cloud.tencent.com/developer/article/1705305">本地安排上HTTPS的最佳途径~</a> 暂时搁置。</p>                    </div>
+                    
+                    
+                    <div class="social-button" 
+                        data-url="https://dhui626.github.io/index.php/archives/23/"
+                        data-title="Jellyfin 折腾记录 - dhui's Blog" 
+                        data-excerpt="Jellyfin 个人媒体库搭建记录"
+                        data-img="https://dhui626.github.io/pics/Kimi no Tonari de.jpg" 
+                        data-twitter="dhui"
+                        data-weibo="dhui"
+                        data-image="https://dhui626.github.io/pics/Kimi no Tonari de.jpg">
+                                                                            <a role=button 
+                                aria-label="为文章点赞" 
+                                id="social" 
+                                href="javascript:void(0);" onclick="VOID_Vote.vote(this);" 
+                                data-item-id="23" 
+                                data-type="up"
+                                data-table="content"
+                                class="btn btn-normal post-like vote-button"
+                            >ENJOY <span class="value">0</span>
+                            </a>
+                                                
+                        <a aria-label="分享到微博" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
+                        <a aria-label="分享到Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
+                    </div>
+                </article>
+
+                <script>
+                (function () {
+                    $.each($('iframe'), function(i, item){
+                        var src = $(item).attr('src');
+                        if (typeof src === 'string' && src.indexOf('player.bilibili.com') > -1) {
+                            // $(item).addClass('bili-player');
+                            // if (src.indexOf('&high_quality') < 0) {
+                            //     src += '&high_quality=1'; // 启用高质量
+                            //     $(item).attr('src', src);
+                            // }
+                            $(item).wrap('<div class="bili-player"></div>');
+                        }
+                    });
+                })();
+                </script>
+
+                <!--分页-->
+                                <div class="post-pager">                                            <div class="prev">
+                            <a href="https://dhui626.github.io/index.php/archives/6/"><h2>测试数学公式</h2></a>
+                            <p>测试 MathJax 插件是否正确启用。</p>                        </div>
+                                                                                    <div class="next">
+                            <a href="https://dhui626.github.io/index.php/archives/24/"><h2>Visual Studio 踩坑记录</h2></a>
+                            <p>Visual Studio 个人手册。
+更新中....</p>                        </div>
+                                    </div>
+                            </section>
+        </div> <!--end .contents-wrap-->
+        <!--目录，可选-->
+                    <div class="toc-mask" onclick="TOC.close();"></div>
+            <div aria-label="文章目录" class="TOC"></div>
+            <style>
+            #toggle-toc { display: block; }
+            </style>
+            </div>
+    <!--评论区，可选-->
+    
+<div class="comments-container float-up">
+    <section id="comments" class="container">
+        <!--评论框-->
+                    <script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-23'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-23'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+            <div id="respond-post-23" class="respond">
+                <div class="cancel-comment-reply" role=button>
+                    <a id="cancel-comment-reply-link" href="https://dhui626.github.io/index.php/archives/23/#respond-post-23" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>                </div>
+                <h3 id="response" class="widget-title text-left">添加新评论</h3>
+                                <form method="post" action="https://dhui626.github.io/index.php/archives/23/comment" id="comment-form">
+                                            <div class="comment-info-input">
+                        <input aria-label="称呼(必填)" type="text" name="author" id="author" required placeholder="称呼(必填)" value="" />
+                        <input aria-label="电子邮件(必填，将保密)" 
+                            type="email" name="mail" id="mail" 
+                            placeholder="电子邮件(必填，将保密)" 
+                            required                            value="" />
+                        <input aria-label="网站(选填)" type="url" name="url" id="url" 
+                                                        placeholder="网站(选填)"  
+                            value="" />
+                        </div>
+                                        <p style="margin-top:0">
+                        <textarea aria-label="评论输入框" class="input-area" rows="5" name="text" id="textarea" 
+                            placeholder="在这里输入你的评论..." 
+                            style="resize:none;"></textarea>
+                    </p>
+                    <p class="comment-buttons">
+                        <span class="OwO" aria-label="表情按钮" role="button"></span>
+                                                <button id="comment-submit-button" type="submit" class="submit btn btn-normal">提交评论</button>
+                    </p>
+                </form>
+            </div>
+                
+        <!--历史评论-->
+        <h3 class="comment-separator">
+            <div class="comment-tab-current">
+                                    <span class="comment-num">
+                        评论列表                    </span>
+                            </div>
+        </h3>
+            </section>
+</div></main>
+        <footer>
+            <div class="container wide">
+                <section>
+                    <p>© 2023  <span class="brand">dhui's Blog</span></p>
+                    <p>感谢陪伴：<span id="uptime"></span></p>
+                </section>
+                <section>
+                    <p>Powered by <a href="http://typecho.org/">Typecho</a> • <a href="https://blog.imalan.cn/archives/247/">Theme VOID</a></p>
+                    <p></p>
+                </section>
+            </div>
+        </footer>
+
+        <!--侧边控制按钮-->
+        <aside id="ctrler-panel">
+            <div class="ctrler-item" id="go-top">
+                <a target="_self" aria-label="返回顶部" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_SmoothScroller.scrollTo(0);"><i class="voidicon-up"></i></a>
+            </div>
+
+            
+            <div aria-label="展开或关闭设置面板" id="toggle-setting-pc" class="ctrler-item hidden-xs">
+                <a target="_self" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </div>
+            <div aria-label="展开或关闭文章目录" class="ctrler-item" id="toggle-toc">
+                <a target="_self" href="javascript:void(0);" style="margin-left: -2px" onclick="TOC.toggle()"><i class="voidicon-left"></i></a>
+            </div>
+        </aside>
+
+        <!--站点设置面板-->
+        <aside hidden id="setting-panel">
+            <section>
+                <div id="toggle-night">
+                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();"><i></i></a>
+                </div>
+                <div id="adjust-text-container">
+                    <div class="adjust-text-item">
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(false);"><i class="voidicon-font"></i>-</a>
+                        <span id="current_textsize"></span>
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(true);"><i class="voidicon-font"></i>+</a>
+                    </div>
+                    <div class="adjust-text-item">
+                        <a target="_self" class="font-indicator  checked" href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, false);">Sans</a>
+                        <a target="_self" class="font-indicator " href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, true);">Serif</a>
+                    </div>
+                </div>
+            </section>
+            <section id="links">
+                                    <a target="_self" class="link" href="javascript:void(0)" onclick="VOID_Ui.toggleLoginForm()"><i class="voidicon-user"></i></a>       
+                                <a class="link" title="RSS" target="_blank" href="https://dhui626.github.io/index.php/feed/"><i class="voidicon-rss"></i></a>
+                            </section>
+            <section id="login-panel" >
+                                    <form action="https://dhui626.github.io/index.php/action/login?_=201a0d2f5eee34bc840be5bb4991f72b" id="loggin-form" method="post" name="login" role="form">
+                        <div id="loggin-inputs">
+                            <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required/>
+                            <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required/>
+                            <input type="hidden" name="referer" value="https://dhui626.github.io/index.php/archives/23/">
+                        </div>
+                        <div class="buttons" id="loggin-buttons">
+                            <button class="btn btn-normal" type="button" onclick="$('#login-panel').removeClass('show');$('#setting-panel').removeClass('show')">关闭</button>
+                            <button class="btn btn-normal" type="submit" onclick="VOID_Ui.rememberPos()">登录</button>
+                            <span hidden id="wait" class="btn btn-normal">请稍等……</span>
+                        </div>
+                    </form>
+                 
+            </section> 
+        </aside>
+
+                <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }}).catch(function(err) {
+                console.log('Service Worker registration failed: ', err);
+            });
+        }
+        </script>
+                <script data-manual src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-35ea1de458.js"></script>
+                <script src='https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/mathjax/2.7.4/MathJax.js'></script>
+                <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-80b84c7780.js"></script>
+        <script>
+        if($(".OwO").length > 0){
+            new OwO({
+                logo: 'OωO',
+                container: document.getElementsByClassName('OwO')[0],
+                target: document.getElementsByClassName('input-area')[0],
+                api: 'https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/owo/OwO_03.json',
+                position: 'down',
+                width: '400px',
+                maxHeight: '250px'
+            });
+        }
+        </script>
+                    </body>
+</html>

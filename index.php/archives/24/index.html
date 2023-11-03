@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Visual Studio 踩坑记录 - dhui's Blog</title>
+    <meta name="author" content="dhui" />
+    <meta name="description" content="Visual Studio 个人手册。
+更新中...." />
+    <meta property="og:title" content="Visual Studio 踩坑记录 - dhui's Blog" />
+    <meta property="og:description" content="Visual Studio 个人手册。
+更新中...." />
+    <meta property="og:site_name" content="Visual Studio 踩坑记录 - dhui's Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dhui626.github.io/index.php/archives/24/" />
+    <meta property="og:image" content="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg" />
+    <meta property="article:published_time" content="2023-10-28T17:04:00+00:00" />
+    <meta property="article:modified_time" content="2023-10-29T12:18:33+00:00" />
+    <meta name="twitter:title" content="Visual Studio 踩坑记录 - dhui's Blog" />
+    <meta name="twitter:description" content="Visual Studio 个人手册。
+更新中...." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:image" content="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg" />
+    <meta name="generator" content="Typecho 1.2.1" />
+<meta name="template" content="VOID-nightly" />
+<link rel="pingback" href="https://dhui626.github.io/index.php/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dhui626.github.io/index.php/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dhui626.github.io/index.php/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="Visual Studio 踩坑记录 &raquo; dhui's Blog &raquo; RSS 2.0" href="https://dhui626.github.io/index.php/feed/archives/24/" />
+<link rel="alternate" type="application/rdf+xml" title="Visual Studio 踩坑记录 &raquo; dhui's Blog &raquo; RSS 1.0" href="https://dhui626.github.io/index.php/feed/rss/archives/24/" />
+<link rel="alternate" type="application/atom+xml" title="Visual Studio 踩坑记录 &raquo; dhui's Blog &raquo; ATOM 1.0" href="https://dhui626.github.io/index.php/feed/atom/archives/24/" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-1e9bf597b1.css">
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-505617232e.css">
+
+    <!--JS-->
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-header-c3f7d82f38.js"></script>
+    <script>
+    VOIDConfig = {
+        PJAX : false,
+        searchBase : "https://dhui626.github.io/index.php/search/",
+        home: "https://dhui626.github.io/index.php/",
+        buildTime : "2023-10-26T14:49",
+        enableMath : true,
+        lazyload : true,
+        colorScheme:  0,
+        headerMode: 1,
+        followSystemColorScheme: false,
+        browserLevelLoadingLazy: false,
+        VOIDPlugin: true,
+        votePath: "https://dhui626.github.io/index.php/action/void?",
+        lightBg: "",
+        darkBg: "",
+        lineNumbers: true,
+        darkModeTime: {
+            'start': 22.5,
+            'end': 7        },
+        horizontalBg: false,
+        verticalBg: false,
+        indexStyle: 0,
+        version: 3.51,
+        isDev: true
+    }
+    </script>
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/header-fd3209d155.js"></script>
+    
+        <style>
+                @media screen and (min-width: 768px){
+            main>.lazy-wrap{min-height: 70vh;}
+        }
+        
+                @media screen and (max-width: 768px){
+            main>.lazy-wrap{min-height: 100vh;}
+        }
+            </style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    
+    
+    </head>
+
+<body fontsize="3" class=" macStyleCodeBlock line-numbers lazyload-img">
+    
+    <header class="header-mode-1 ">
+        <div class="container wider">
+            <nav>
+                <a role=button aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
+                    <span></span>
+                </a>
+                <a class="brand" href="https://dhui626.github.io/index.php/">dhui6026</a>
+                <a href="https://dhui626.github.io/index.php/">首页</a>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>                <span class="dropdown">分类
+                    <ul>
+                        <li><a href="https://dhui626.github.io/index.php/category/default/">默认分类</a></li><li><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a></li><li><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a></li>                    </ul>
+                </span>
+                                                    <span class="hidden-xs search-form-desktop">
+                        <label for="search">搜索</label>
+                        <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search" required />
+                    </span>
+                                <a  
+                    role=button aria-label="展开搜索" id="toggle-mobile-search" target="_self" 
+                    href="javascript:void(0);" 
+                    onclick="VOID_Ui.toggleSearch(this);">
+                    <i class="voidicon-search"></i>
+                </a>
+                <a target="_self" href="javascript:void(0);" id="toggle-setting" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </nav>
+        </div>
+        <div class="mobile-search-form">
+            <label for="search_new">搜索</label>
+            <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search_new" required placeholder="输入内容然后 Go!" />
+            <button onclick="VOID.startSearch('#search_new');">Go!</button>
+        </div>
+    </header>
+    <div id="nav-mobile">
+        <section id="pages" data-title="PAGES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>            </nav>
+        </section>
+        <section id="categories" data-title="CATEGORIES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/category/default/">默认分类</a><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a>            </nav>
+        </section>
+            </div>
+<main id="pjax-container">
+    <title hidden>
+        Visual Studio 踩坑记录 - dhui's Blog    </title>
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "dhui's Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=200&amp;r=&amp;d="
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "dhui",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=400&amp;r=&amp;d=",
+            "width": 400,
+            "height": 400
+        },
+        "url": "https://dhui626.github.io/index.php/author/1/"
+    },
+    "headline": "Visual Studio 踩坑记录 - dhui's Blog",
+    "url": "https://dhui626.github.io/index.php/archives/24/",
+    "datePublished": "2023-10-28T17:04:00+00:00",
+    "dateModified": "2023-10-29T12:18:33+00:00",
+    "image": {
+        "@type": "ImageObject",
+                "url": "https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg"
+    },
+    "description": "Visual Studio 个人手册。
+更新中....",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://dhui626.github.io/index.php/"
+    }
+}
+</script>
+    
+<div class="lazy-wrap
+     loading dark">
+
+            <div id="banner" class="">
+                                            <img class="lazyload" data-src="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg">
+                    </div>
+        <script>$('body>header').removeClass('force-dark').removeClass('no-banner');</script>
+    
+            <div class="banner-title">
+            <h1 class="post-title">
+                                    Visual Studio 踩坑记录                            </h1>
+                            <p class="post-meta">
+                                            <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
+                        <time datetime="2023-10-28T17:04:00+00:00">2023-10-28</time>
+                        &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
+                        &nbsp;•&nbsp;<span>61&nbsp;阅读</span>                                                            </p>
+                    </div>
+    </div>
+    <div class="wrapper container">
+        <div class="contents-wrap"> <!--start .contents-wrap-->
+            <section id="post" class="float-up">
+                <article class="post yue">
+
+                    
+                    <div class="articleBody" class="full">
+                        <p>运行环境：Windows 10 22H2 x64 + Visual Studio 2022</p><h2 id="toc_0">vcpkg</h2><p>vcpkg 是 Microsoft 的跨平台开源软件包管理器，极大地简化了 Windows、Linux 和 macOS 上第三方库的配置与安装。<a href="https://vcpkg.io/">官网</a></p><h3 id="toc_1">配置教程</h3><p><strong>Step 1: 从 GitHub 克隆 vcpkg</strong></p><pre><code>git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg</code></pre><p>注意vcpkg目录的位置，确保文件路径长度合适以及可以存储较大数据。</p><p><strong>Step 2: 运行 bootstrap</strong></p><pre><code>./bootstrap-vcpkg.bat</code></pre><p><strong>Step 3: 将包自动集成到 vs 的工程中</strong></p><pre><code>./vcpkg integrate install</code></pre><p>之后缺哪个运行库只需在该文件夹打开 powershell 运行 vcpkg 安装指令即可。</p><h3 id="toc_2">常用命令</h3><p>搜索包</p><pre><code>./vcpkg search [packages]</code></pre><p>安装包（输入上面搜出的包名）</p><pre><code>./vcpkg install &lt;pkg&gt;</code></pre><p>查看已安装包列表</p><pre><code>./vcpkg list</code></pre><p>删除包</p><pre><code>./vcpkg remove &lt;pkg&gt;</code></pre><p>帮助</p><pre><code>./vcpkg help</code></pre><p>卸载 vcpkg（并在之后删除此文件夹）</p><pre><code>./vcpkg integrate remove</code></pre><p>举例</p><pre><code>.\vcpkg install eigen3:x64-windows
+.\vcpkg install opencv4[contrib]:x64-windows
+.\vcpkg install qt5-base:x64-windows</code></pre><h3 id="toc_3">清理空间</h3><p>在文档<code>docs/about/faq.md</code>中提到：</p><pre><code class="lang-markdown">## How can I remove temporary files?
+
+You can save some disk space by completely removing the `packages\`, `buildtrees\`, and `downloads\` folders.</code></pre><p>​    参考 @zhc 笔记，删除<code>buildtrees\</code>可能导致静态库无法调试。</p><h3 id="toc_4">网络问题</h3><p>使用代理服务器进行网络加速时，PowerShell 终端默认不走代理端口。为此可以在 PowerShell 中运行：</p><pre><code>$env:HTTP_PROXY=&quot;localhost:7890&quot;
+$env:HTTPS_PROXY=&quot;localhost:7890&quot;</code></pre><p>上述代理服务器端口因设备而异，仅改变本次端口设置。</p><p>如果需要设置全局代理，可在环境变量中设置</p><pre><code>http_proxy         http://127.0.0.1:7890/
+https_proxy     http://127.0.0.1:7890/</code></pre><p>CMake 时遇到网络问题：在 CMakeLists.txt 的前面添加如下代码</p><pre><code>set(ENV{http_proxy} &quot;http://127.0.0.1:7890&quot;)
+set(ENV{https_proxy} &quot;http://127.0.0.1:7890&quot;)</code></pre><h2 id="toc_5">项目配置</h2><h3 id="toc_6">CMake</h3><p><strong>方法一</strong>：使用 CMake-GUI</p><p>选择源代码位置、build 目录，只需 Configure、Generate、Open Project 三步。</p><p>若出错则需要对应报错信息找错。大部分错误是找不到依赖库。</p><p><strong>方法二</strong>：使用 VS 内置</p><p>新建一个空的 VS 项目，文件-打开-CMake，选中 CMakeLists.txt</p><p>打开CMake设置-高级-CMake生成器-改为VS2022 Win64</p><h3 id="toc_7">注意点</h3><ol><li>请勿新建一个项目，然后将代码文件(.cpp .h等)加入项目，折磨且成功率低</li><li>配置前确认项目可以在win环境生成，如某些依赖库只支持 Linux 系统，需要使用 WSL 生成</li></ol><h3 id="toc_8">字体</h3><p>YaHei Consolas Hybrid 1.12</p><p>Fira Code</p><h3 id="toc_9">命令行参数</h3><p>项目-属性-配置属性-调试-命令行参数</p><h3 id="toc_10">包含目录出错</h3><p>无法打开源文件：fstream</p><p>包含目录只要有一个错的，后面的包含目录都会出错。</p><p>删去不正确的包含目录即可。</p><h2 id="toc_11">Eigen 库使用</h2><p>svd 分解</p><pre><code class="lang-cpp">Eigen::JacobiSVD&lt;Eigen::Matrix3d&gt; svd(J, Eigen::ComputeFullU| Eigen::ComputeFullV);        Eigen::Matrix3d U = svd.matrixU();
+Eigen::Matrix3d S = svd.singularValues();
+Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.T</code></pre>                    </div>
+                    
+                    
+                    <div class="social-button" 
+                        data-url="https://dhui626.github.io/index.php/archives/24/"
+                        data-title="Visual Studio 踩坑记录 - dhui's Blog" 
+                        data-excerpt="Visual Studio 个人手册。
+更新中...."
+                        data-img="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg" 
+                        data-twitter="dhui"
+                        data-weibo="dhui"
+                        data-image="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg">
+                                                                            <a role=button 
+                                aria-label="为文章点赞" 
+                                id="social" 
+                                href="javascript:void(0);" onclick="VOID_Vote.vote(this);" 
+                                data-item-id="24" 
+                                data-type="up"
+                                data-table="content"
+                                class="btn btn-normal post-like vote-button"
+                            >ENJOY <span class="value">0</span>
+                            </a>
+                                                
+                        <a aria-label="分享到微博" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
+                        <a aria-label="分享到Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
+                    </div>
+                </article>
+
+                <script>
+                (function () {
+                    $.each($('iframe'), function(i, item){
+                        var src = $(item).attr('src');
+                        if (typeof src === 'string' && src.indexOf('player.bilibili.com') > -1) {
+                            // $(item).addClass('bili-player');
+                            // if (src.indexOf('&high_quality') < 0) {
+                            //     src += '&high_quality=1'; // 启用高质量
+                            //     $(item).attr('src', src);
+                            // }
+                            $(item).wrap('<div class="bili-player"></div>');
+                        }
+                    });
+                })();
+                </script>
+
+                <!--分页-->
+                                <div class="post-pager">                                            <div class="prev">
+                            <a href="https://dhui626.github.io/index.php/archives/23/"><h2>Jellyfin 折腾记录</h2></a>
+                            <p>Jellyfin 个人媒体库搭建记录</p>                        </div>
+                                                                                    <div class="next">
+                            <a href="https://dhui626.github.io/index.php/archives/25/"><h2>Linux初上手记录</h2></a>
+                            <p>用 Windows Subsystem for Linux 进行 CV 代码编译</p>                        </div>
+                                    </div>
+                            </section>
+        </div> <!--end .contents-wrap-->
+        <!--目录，可选-->
+                    <div class="toc-mask" onclick="TOC.close();"></div>
+            <div aria-label="文章目录" class="TOC"></div>
+            <style>
+            #toggle-toc { display: block; }
+            </style>
+            </div>
+    <!--评论区，可选-->
+    
+<div class="comments-container float-up">
+    <section id="comments" class="container">
+        <!--评论框-->
+                    <script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-24'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-24'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+            <div id="respond-post-24" class="respond">
+                <div class="cancel-comment-reply" role=button>
+                    <a id="cancel-comment-reply-link" href="https://dhui626.github.io/index.php/archives/24/#respond-post-24" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>                </div>
+                <h3 id="response" class="widget-title text-left">添加新评论</h3>
+                                <form method="post" action="https://dhui626.github.io/index.php/archives/24/comment" id="comment-form">
+                                            <div class="comment-info-input">
+                        <input aria-label="称呼(必填)" type="text" name="author" id="author" required placeholder="称呼(必填)" value="" />
+                        <input aria-label="电子邮件(必填，将保密)" 
+                            type="email" name="mail" id="mail" 
+                            placeholder="电子邮件(必填，将保密)" 
+                            required                            value="" />
+                        <input aria-label="网站(选填)" type="url" name="url" id="url" 
+                                                        placeholder="网站(选填)"  
+                            value="" />
+                        </div>
+                                        <p style="margin-top:0">
+                        <textarea aria-label="评论输入框" class="input-area" rows="5" name="text" id="textarea" 
+                            placeholder="在这里输入你的评论..." 
+                            style="resize:none;"></textarea>
+                    </p>
+                    <p class="comment-buttons">
+                        <span class="OwO" aria-label="表情按钮" role="button"></span>
+                                                <button id="comment-submit-button" type="submit" class="submit btn btn-normal">提交评论</button>
+                    </p>
+                </form>
+            </div>
+                
+        <!--历史评论-->
+        <h3 class="comment-separator">
+            <div class="comment-tab-current">
+                                    <span class="comment-num">
+                        评论列表                    </span>
+                            </div>
+        </h3>
+            </section>
+</div></main>
+        <footer>
+            <div class="container wide">
+                <section>
+                    <p>© 2023  <span class="brand">dhui's Blog</span></p>
+                    <p>感谢陪伴：<span id="uptime"></span></p>
+                </section>
+                <section>
+                    <p>Powered by <a href="http://typecho.org/">Typecho</a> • <a href="https://blog.imalan.cn/archives/247/">Theme VOID</a></p>
+                    <p></p>
+                </section>
+            </div>
+        </footer>
+
+        <!--侧边控制按钮-->
+        <aside id="ctrler-panel">
+            <div class="ctrler-item" id="go-top">
+                <a target="_self" aria-label="返回顶部" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_SmoothScroller.scrollTo(0);"><i class="voidicon-up"></i></a>
+            </div>
+
+            
+            <div aria-label="展开或关闭设置面板" id="toggle-setting-pc" class="ctrler-item hidden-xs">
+                <a target="_self" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </div>
+            <div aria-label="展开或关闭文章目录" class="ctrler-item" id="toggle-toc">
+                <a target="_self" href="javascript:void(0);" style="margin-left: -2px" onclick="TOC.toggle()"><i class="voidicon-left"></i></a>
+            </div>
+        </aside>
+
+        <!--站点设置面板-->
+        <aside hidden id="setting-panel">
+            <section>
+                <div id="toggle-night">
+                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();"><i></i></a>
+                </div>
+                <div id="adjust-text-container">
+                    <div class="adjust-text-item">
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(false);"><i class="voidicon-font"></i>-</a>
+                        <span id="current_textsize"></span>
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(true);"><i class="voidicon-font"></i>+</a>
+                    </div>
+                    <div class="adjust-text-item">
+                        <a target="_self" class="font-indicator  checked" href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, false);">Sans</a>
+                        <a target="_self" class="font-indicator " href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, true);">Serif</a>
+                    </div>
+                </div>
+            </section>
+            <section id="links">
+                                    <a target="_self" class="link" href="javascript:void(0)" onclick="VOID_Ui.toggleLoginForm()"><i class="voidicon-user"></i></a>       
+                                <a class="link" title="RSS" target="_blank" href="https://dhui626.github.io/index.php/feed/"><i class="voidicon-rss"></i></a>
+                            </section>
+            <section id="login-panel" >
+                                    <form action="https://dhui626.github.io/index.php/action/login?_=870ffbbcb46d86866d12003d7050bdcb" id="loggin-form" method="post" name="login" role="form">
+                        <div id="loggin-inputs">
+                            <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required/>
+                            <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required/>
+                            <input type="hidden" name="referer" value="https://dhui626.github.io/index.php/archives/24/">
+                        </div>
+                        <div class="buttons" id="loggin-buttons">
+                            <button class="btn btn-normal" type="button" onclick="$('#login-panel').removeClass('show');$('#setting-panel').removeClass('show')">关闭</button>
+                            <button class="btn btn-normal" type="submit" onclick="VOID_Ui.rememberPos()">登录</button>
+                            <span hidden id="wait" class="btn btn-normal">请稍等……</span>
+                        </div>
+                    </form>
+                 
+            </section> 
+        </aside>
+
+                <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }}).catch(function(err) {
+                console.log('Service Worker registration failed: ', err);
+            });
+        }
+        </script>
+                <script data-manual src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-35ea1de458.js"></script>
+                <script src='https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/mathjax/2.7.4/MathJax.js'></script>
+                <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-80b84c7780.js"></script>
+        <script>
+        if($(".OwO").length > 0){
+            new OwO({
+                logo: 'OωO',
+                container: document.getElementsByClassName('OwO')[0],
+                target: document.getElementsByClassName('input-area')[0],
+                api: 'https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/owo/OwO_03.json',
+                position: 'down',
+                width: '400px',
+                maxHeight: '250px'
+            });
+        }
+        </script>
+                    </body>
+</html>

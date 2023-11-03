@@ -1,0 +1,566 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>个人网站 搭建记录 - dhui's Blog</title>
+    <meta name="author" content="dhui" />
+    <meta name="description" content="记录笔者搭建本动态网页博客的全过程。" />
+    <meta property="og:title" content="个人网站 搭建记录 - dhui's Blog" />
+    <meta property="og:description" content="记录笔者搭建本动态网页博客的全过程。" />
+    <meta property="og:site_name" content="个人网站 搭建记录 - dhui's Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://dhui626.github.io/index.php/archives/3/" />
+    <meta property="og:image" content="https://dhui626.github.io/pics/Colorful.jpg" />
+    <meta property="article:published_time" content="2023-10-26T15:11:00+00:00" />
+    <meta property="article:modified_time" content="2023-10-31T14:18:15+00:00" />
+    <meta name="twitter:title" content="个人网站 搭建记录 - dhui's Blog" />
+    <meta name="twitter:description" content="记录笔者搭建本动态网页博客的全过程。" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:image" content="https://dhui626.github.io/pics/Colorful.jpg" />
+    <meta name="generator" content="Typecho 1.2.1" />
+<meta name="template" content="VOID-nightly" />
+<link rel="pingback" href="https://dhui626.github.io/index.php/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dhui626.github.io/index.php/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://dhui626.github.io/index.php/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="个人网站 搭建记录 &raquo; dhui's Blog &raquo; RSS 2.0" href="https://dhui626.github.io/index.php/feed/archives/3/" />
+<link rel="alternate" type="application/rdf+xml" title="个人网站 搭建记录 &raquo; dhui's Blog &raquo; RSS 1.0" href="https://dhui626.github.io/index.php/feed/rss/archives/3/" />
+<link rel="alternate" type="application/atom+xml" title="个人网站 搭建记录 &raquo; dhui's Blog &raquo; ATOM 1.0" href="https://dhui626.github.io/index.php/feed/atom/archives/3/" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-1e9bf597b1.css">
+    <link rel="stylesheet" href="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-505617232e.css">
+
+    <!--JS-->
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-header-c3f7d82f38.js"></script>
+    <script>
+    VOIDConfig = {
+        PJAX : false,
+        searchBase : "https://dhui626.github.io/index.php/search/",
+        home: "https://dhui626.github.io/index.php/",
+        buildTime : "2023-10-26T14:49",
+        enableMath : true,
+        lazyload : true,
+        colorScheme:  0,
+        headerMode: 1,
+        followSystemColorScheme: false,
+        browserLevelLoadingLazy: false,
+        VOIDPlugin: true,
+        votePath: "https://dhui626.github.io/index.php/action/void?",
+        lightBg: "",
+        darkBg: "",
+        lineNumbers: true,
+        darkModeTime: {
+            'start': 22.5,
+            'end': 7        },
+        horizontalBg: false,
+        verticalBg: false,
+        indexStyle: 0,
+        version: 3.51,
+        isDev: true
+    }
+    </script>
+    <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/header-fd3209d155.js"></script>
+    
+        <style>
+                @media screen and (min-width: 768px){
+            main>.lazy-wrap{min-height: 70vh;}
+        }
+        
+                @media screen and (max-width: 768px){
+            main>.lazy-wrap{min-height: 100vh;}
+        }
+            </style>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    
+    
+    </head>
+
+<body fontsize="3" class=" macStyleCodeBlock line-numbers lazyload-img">
+    
+    <header class="header-mode-1 ">
+        <div class="container wider">
+            <nav>
+                <a role=button aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
+                    <span></span>
+                </a>
+                <a class="brand" href="https://dhui626.github.io/index.php/">dhui6026</a>
+                <a href="https://dhui626.github.io/index.php/">首页</a>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>                <span class="dropdown">分类
+                    <ul>
+                        <li><a href="https://dhui626.github.io/index.php/category/default/">默认分类</a></li><li><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a></li><li><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a></li>                    </ul>
+                </span>
+                                                    <span class="hidden-xs search-form-desktop">
+                        <label for="search">搜索</label>
+                        <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search" required />
+                    </span>
+                                <a  
+                    role=button aria-label="展开搜索" id="toggle-mobile-search" target="_self" 
+                    href="javascript:void(0);" 
+                    onclick="VOID_Ui.toggleSearch(this);">
+                    <i class="voidicon-search"></i>
+                </a>
+                <a target="_self" href="javascript:void(0);" id="toggle-setting" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </nav>
+        </div>
+        <div class="mobile-search-form">
+            <label for="search_new">搜索</label>
+            <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search_new" required placeholder="输入内容然后 Go!" />
+            <button onclick="VOID.startSearch('#search_new');">Go!</button>
+        </div>
+    </header>
+    <div id="nav-mobile">
+        <section id="pages" data-title="PAGES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/about.html">关于</a>            </nav>
+        </section>
+        <section id="categories" data-title="CATEGORIES">
+            <nav>
+                <a href="https://dhui626.github.io/index.php/category/default/">默认分类</a><a href="https://dhui626.github.io/index.php/category/Study/">文献阅读记录</a><a href="https://dhui626.github.io/index.php/category/ACGN/">ACGN</a>            </nav>
+        </section>
+            </div>
+<main id="pjax-container">
+    <title hidden>
+        个人网站 搭建记录 - dhui's Blog    </title>
+
+    
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "dhui's Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=200&amp;r=&amp;d="
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "dhui",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://secure.gravatar.com/avatar/d407387955c232dbae85835e41e05a95?s=400&amp;r=&amp;d=",
+            "width": 400,
+            "height": 400
+        },
+        "url": "https://dhui626.github.io/index.php/author/1/"
+    },
+    "headline": "个人网站 搭建记录 - dhui's Blog",
+    "url": "https://dhui626.github.io/index.php/archives/3/",
+    "datePublished": "2023-10-26T15:11:00+00:00",
+    "dateModified": "2023-10-31T14:18:15+00:00",
+    "image": {
+        "@type": "ImageObject",
+                "url": "https://dhui626.github.io/pics/Colorful.jpg"
+    },
+    "description": "记录笔者搭建本动态网页博客的全过程。",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://dhui626.github.io/index.php/"
+    }
+}
+</script>
+    
+<div class="lazy-wrap
+     loading dark">
+
+            <div id="banner" class="">
+                                            <img class="lazyload" data-src="https://dhui626.github.io/pics/Colorful.jpg">
+                    </div>
+        <script>$('body>header').removeClass('force-dark').removeClass('no-banner');</script>
+    
+            <div class="banner-title">
+            <h1 class="post-title">
+                                    个人网站 搭建记录                            </h1>
+                            <p class="post-meta">
+                                            <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
+                        <time datetime="2023-10-26T15:11:00+00:00">2023-10-26</time>
+                        &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
+                        &nbsp;•&nbsp;<span>63&nbsp;阅读</span>                                                            </p>
+                    </div>
+    </div>
+    <div class="wrapper container">
+        <div class="contents-wrap"> <!--start .contents-wrap-->
+            <section id="post" class="float-up">
+                <article class="post yue">
+
+                    
+                    <div class="articleBody" class="full">
+                        <h1>个人网站 搭建记录</h1><p>运行环境：Windows 10 22H2</p><p>软件版本：Apache 2.4 + PHP 8.2.12 + MySQL 8.2.0</p><h2 id="toc_0">搭建教程</h2><p>准备安装 Typecho 进行搭建网页测试。下载下来没有html，诶??? php 是什么啊，打开怎么是源码啊。</p><p>此处省略一万字，去学习了静态网页和动态网页的区别。</p><p><strong>安装 php 环境</strong></p><p>首先安装 php 环境，在 Windows 系统下有集成式安装软件 Wampserver，一键安装。</p><p>但是这东西又丑又卡，还不断弹出 cmd 窗口让我觉得是病毒软件，虽然在上面搭建成功了但也反手卸载了。</p><p>不如自己动手安装！</p><p>参考教程：<a href="https://zhuanlan.zhihu.com/p/123960715">记一次windows配置PHP环境</a>。</p><p>难得的优质教程，跟着他的教程来基本没有搜索别的内容了。</p><h3 id="toc_1"><strong>1 安装Apache2.4</strong></h3><p>1.1 Apache 的下载链接 <a href="https://httpd.apache.org/download.cgi">The Apache HTTP Server Project</a></p><p>1.2 点击 a number of third party vendors 下载 windows 版本</p><p>1.3 选择 ApacheHaus</p><p>1.4 选择 x64 的版本下载</p><p>1.5 建立个人主页文件夹 Home，将下载的 apache 解压到其中。</p><p>1.6 用记事本打开 conf 中的 httpd.conf，找到如下代码段</p><pre><code>Define SRVROOT &quot;/Apache24&quot;
+ServerRoot &quot;${SRVROOT}&quot;</code></pre><p>将引号内的内容改为 Apache 的路径。</p><pre><code>Define SRVROOT &quot;E:/CloudMusic/VSCode/Home/Apache24&quot;
+ServerRoot &quot;${SRVROOT}&quot;</code></pre><p>1.7 更改端口号</p><pre><code>Listen 80</code></pre><p>默认端口号是80，浏览器输入 localhost 就能访问，可以改为其他</p><pre><code>Listen 9700</code></pre><p>1.8 用管理员身份打开 cmd，然后进入 apache 的 bin 路径，用 httpd -k install 进行安装</p><p>1.9 安装完成之后在 /Apache24/bin 中打开 ApacheMonitor.exe 并启用服务。</p><p>1.10 验证安装，在浏览器输入localhost:9700 如果打开 apache 的首页即为安装成功。</p><h3 id="toc_2"><strong>2 安装PHP</strong></h3><p>2.1 下载 PHP8.2，直接到<a href="https://windows.php.net/download">官网</a>下载即可，笔者选择的版本是 VS16 x64 Thread Safe (2023-Oct-24 21:57:24)</p><p>2.2 解压到个人主页文件夹中</p><p>2.3 打开PHP的目录将 php.ini-development 先复制一份备份，然后把 php.ini-development 改为 php.ini 保存</p><p>2.4 打开 php.ini 修改配置，查找</p><pre><code>;extension_dir = &quot;ext&quot;</code></pre><p>改为 extension_dir = "ext的目录"，比如</p><pre><code>extension_dir = &quot;E:/CloudMusic/VSCode/Home/PHP/ext&quot;</code></pre><p>2.5 打开 apache/conf 的 httpd.conf，在 DirectoryIndex 后加上 index.php</p><pre><code>&lt;IfModule dir_module&gt;
+    DirectoryIndex index.html index.php
+&lt;/IfModule&gt;</code></pre><p>2.6 开启 rewrite 功能：将下面这行代码前面的 # 去掉（httpd.conf中）</p><pre><code>#LoadModule rewrite_module modules/mod_rewrite.so</code></pre><p>2.7 加载PHP模块，在 httpd.conf 中加入以下代码</p><pre><code class="lang-text">#php8
+LoadModule php_module E:/CloudMusic/VSCode/Home/PHP/php8apache2_4.dll
+&lt;IfModule php_module&gt; 
+        PHPIniDir &quot;E:/CloudMusic/VSCode/Home/PHP/&quot; 
+        AddType application/x-httpd-php .php
+        AddType application/x-httpd-php-source .phps
+&lt;/IfModule&gt;</code></pre><p>2.8 验证，注释 apache24/htdocs 中 index.html 的网页代码，输入下边这个输入下边这个 Hello World 代码，然后重命名为 index.php.</p><pre><code class="lang-text">&lt;?php
+echo&quot;hello world&quot;
+?&gt;</code></pre><p>在电脑浏览器输入 localhost:9700 , 若能正确显示 hello world , 则 php 网页已经能够显示了。</p><h3 id="toc_3"><strong>3 安装mysql</strong></h3><p>3.1 <a href="https://dev.mysql.com/downloads/mysql/">官网下载链接</a>。笔者选择的是 mysql-8.2.0-winx64.msi</p><p>3.2 直接安装的话可能会提示缺少 vs2019 的 redistributable. 到微软官网下载安装 <a href="https://aka.ms/vs/16/release/VC_redist.x64.exe">VC_redist.x64.exe</a></p><p>3.3 以<strong>管理员</strong>身份进入cmd命令行。执行</p><pre><code>cd C:\Program Files\MySQL\MySQL Server 8.2\bin
+mysqld.exe --install
+mysqld --initialize</code></pre><p>3.4 在 win+r 之后输入 services.msc 进入本地服务管理，启动 mysql 服务。</p><p>3.5 登录需要输入密码。在 C:\Program Files\MySQL\MySQL Server 8.2\data 中后缀名为 err 的文件中找到临时密码，搜索如下字段</p><pre><code>A temporary password is generated for root@localhost: &amp;baRyjS-b5mp</code></pre><p>3.6 输入 mysql -u root -p 和密码进行登录。登录之后修改密码。</p><pre><code class="lang-text"> ALTER USER &#039;root&#039;@&#039;localhost&#039; IDENTIFIED WITH mysql_native_password BY &#039;123456&#039;;</code></pre><p>3.7 输入如下代码创建数据库</p><pre><code>create DATABASE home;</code></pre><h3 id="toc_4"><strong>4 安装typecho</strong></h3><p>4.1 进入 /Apache24/htdocs 目录，将 typecho 解压到此处。在浏览器中打开 localhost:9700</p><p>4.2 安装提示缺少拓展，需要安装所需拓展。将 php.ini 对应的分号去掉即可。</p><pre><code>;extension=mbstring
+;extension=openssl
+;extension=pdo_mysql</code></pre><p>4.3 继续安装，数据库名称填 home，数据库密码填修改后的密码，其余问题不大。</p><p>4.4 安装完成后登录控制台，可以进行网页管理等操作。</p><p>4.5 第三方主题安装：解压到 /usr/themes ，插件安装：解压到 /usr/plugins ，启用即可。</p><p>4.6 若第三方主题启用失败建议查看 github issue 排查问题。</p><h3 id="toc_5">5 网站设置</h3><p>主题设置可以在 控制台-外观-设置外观 里找到，在此处启用数学公式解析。</p><p>设置-基本设置-站点地址，可以更改站点地址。</p><p><strong>启用https</strong></p><p>如果不关心网站的“不安全”提示，SSL 证书可以暂时不管。</p><p>首先登录 Typecho 后台 -&gt; 设置 -&gt; 基本设置 -&gt; 站点地址改成 https 的域名</p><p>然后编辑 Typecho 站点根目录下的文件<code>config.inc.php</code>加入下面一行配置。</p><pre><code>/** 开启HTTPS */
+define(&#039;__TYPECHO_SECURE__&#039;,true);</code></pre><p>然后在站点主题目录下找到<code>comments.php</code>文件，并搜索到<code>$this-&gt;commentUrl()</code>，将其修改为：<code>echo str_replace(&quot;http&quot;,&quot;https&quot;,$this-&gt;commentUrl())</code>，然后点击保存即可。</p><p>在开启 https 之后，网站的所有图片外链都需要修改为 https 外链，否则无法正常加载。</p><p><strong>内网穿透设置</strong></p><p>使用 SakuraFrp，设置本地端口为 443 即可。</p><p>在网站未启用 https 的情况下，开启 “强制 https” 会有 bug，会把 http 请求都转换为 https，一些本地的图片资源链接 <code>http://localhost/xxx</code> 也会被强制转换为 <code>https://dhui626.github.io/xxx</code> ，导致无法正常显示。</p><p>建议图片外链选择 <code>github.io</code> ，作为免费的图床。</p><p>站点地址改成 <code>https://dhui626.github.io</code> 之后，还是会有 bug，在本地能打开网页，但在其他设备打开无法正常显示。需要将站点地址改为内网穿透地址。如笔者的 <code>https://frp-oak.top:56651/</code>。改了之后用 localhost 还是能登陆的，不用担心不小心把内网穿透隧道删除了而再也进不去了的问题。</p><p><strong>首页静态Html生成</strong></p><p>参考 <a href="https://sunpma.com/484.html">Typecho生成首页静态HTML数倍提高网站打开速度</a></p><p>在网站根目录创建一个php文件，重命名为static.php</p><pre><code>&lt;?php
+    $nowtime=time();
+    $pastsec = $nowtime - $_GET[&quot;t&quot;];
+    if($pastsec&lt;600){
+      exit; //10分钟更新一次，时间可以自己调整
+    }
+    ob_start(); //打开缓冲区
+    include(&quot;index.php&quot;);
+    $content = ob_get_contents(); //得到缓冲区的内容
+    $content .= &quot;\n&lt;script language=javascript src=\&quot;static.php?t=&quot;.$nowtime.&quot;\&quot;&gt;&lt;/script&gt;&quot;;
+    //加上调用更新程序的代码
+
+    file_put_contents(&quot;index.html&quot;,$content);
+    if (!function_exists(&quot;file_put_contents&quot;)){
+      function file_put_contents($fn,$fs){
+        $fp=fopen($fn,&quot;w+&quot;);
+        fputs($fp,$fs);
+        fclose($fp);  
+      }
+    }
+?&gt;</code></pre><p>设置网站优先打开 <code>index.html</code> 而不是<code>index.php</code>，即可在每次打开 html 提高速度，且会根据设定的时间间隔更新。</p><p><strong>全站静态Html生成</strong></p><p>参考 <a href="https://ilay.top/p/310.html">typecho全站静态化方案</a> 、 <a href="https://mikuos.com/1130.html">typecho完全静态化</a></p><p>因动态网站部署麻烦，许多站点仅支持静态网站，如 <code>github.io</code> 。本方法可以导出全站的静态html。</p><p>创建以下脚本并命名为<code>staticpass.php</code> .</p><p>上述参考的代码是 Linux 环境下的代码，笔者已将其转化为 Windows 代码。需要手动安装 wget .</p><p>注意 url 是需要爬虫的网页地址，rurl是需要部署静态网页的地址，需要相应修改。</p><pre><code>&lt;?php
+$url = &#039;https://dhui626.github.io&#039;; //网址，不能以&quot;/&quot;结尾
+$rurl= &#039;&#039;; //要替换成路径或网址，可为空，不能以&quot;/&quot;结尾
+$dir = __DIR__ . &quot;/&quot; . str_replace(&#039;https://&#039;, &#039;&#039;, str_replace(&#039;http://&#039;, &quot;&quot;, $url));
+exec(&quot;cls&quot;,$clc);
+echo $clc[0];
+echo &quot;开始下载文件\r\n&quot;;
+exec(&quot;RMDIR /S /Q {$dir}&quot;,$return); //小心调用！
+exec(&quot;wget --no-check-certificate -r -p -np {$url}&quot;,$return);
+
+$dirs = get_filenamesbydir($dir);
+
+//不处理非html文件
+for ($i = 0; $i &lt; count($dirs); $i++) {
+    $file=str_replace(__DIR__, &quot;&quot;, $dirs[$i][&#039;file&#039;]);
+
+    if (!preg_match(&quot;/html/&quot;,$file)  ) {
+        //删除对应的元素
+        echo &quot;\r\n不处理文件:\r\n&quot;;
+        echo $file;
+        unset($dirs[$i]); 
+    }  
+}
+array_filter($dirs);
+sort($dirs);//重新生成索引下标
+
+//网址处理
+$count=count($dirs);
+for ($i = 0; $i &lt; $count; $i++) {
+    // echo $url;
+    // echo $rurl;
+    $content=str_replace($url,$rurl,file_get_contents($dirs[$i][&#039;file&#039;]));
+    // echo $dirs[$i][&#039;file&#039;];
+    file_put_contents($dirs[$i][&#039;file&#039;],$content);
+    $n=$i+1;
+    exec(&quot;cls&quot;,$clc);
+    echo $clc[0];
+    echo &quot;文件下载完毕\r\n&quot;;
+    echo &quot;开始处理文件,共{$count}个文件需要处理,已处理{$n}个\r\n&quot;;
+    
+}
+echo &quot;处理完毕，文件目录：{$dir}\r\n&quot;;
+
+function get_allfiles($path, &amp;$files)
+{
+    if (is_dir($path)) {
+        $dp = dir($path);
+        while ($file = $dp-&gt;read()) {
+            if ($file !== &quot;.&quot; &amp;&amp; $file !== &quot;..&quot;) {
+                get_allfiles($path . &quot;/&quot; . $file, $files);
+            }
+        }
+        $dp-&gt;close();
+    }
+    if (is_file($path)) {
+        $files[] = [&#039;file&#039; =&gt; $path];
+    }
+}
+function get_filenamesbydir($dir)
+{
+    $files = array();
+    get_allfiles($dir, $files);
+    return $files;
+}</code></pre><p>执行</p><pre><code>cd E:\CloudMusic\VSCode\Home\Apache24\htdocs
+php staticpass.php</code></pre><p>注意 "php 绝对目录下的staticpass.php" 代码会在当前目录（如未设置php环境变量就是在php根目录中）创建，而不是站点目录，笔者因为这个愚蠢的问题调试了一个多小时的 bug。</p><p><strong>php代码调试</strong></p><p>参考 <a href="https://developers.weixin.qq.com/community/develop/article/doc/000c688fb7cf502571bf4a5b756c13">vscode调试php（解决vscode远程调试无效的问题）</a></p><p>但因为静态网站转换的代码无问题，暂时不打算研究 php 调试相关的问题。</p><h2 id="toc_6">参考资料</h2><p><strong>博客范例参考链接</strong></p><p><a href="https://hikami.moe/">希卡米 | HiKami</a>：Theme <a href="https://github.com/solstice23/argon-theme">Argon</a> By solstice23</p><p><a href="https://www.himiku.com/">初之音</a>：Powered by <a href="http://typecho.org/">Typecho</a>  Theme <a href="https://blog.imalan.cn/archives/247/">VOID</a></p><p><a href="https://ednovas.xyz/">EdNovas 的小站</a> ：Framework <a href="https://hexo.io/">Hexo</a> Theme <a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></p><p><strong>静态网页模板参考链接（没用上）</strong></p><p><a href="https://freehtml5.co/">FreeHtml5</a></p><p><a href="https://html5up.net/">HTML5 UP</a></p><p><strong>Web开发学习链接</strong></p><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn">mdn web docs</a></p><p>End</p>                    </div>
+                    
+                    
+                    <div class="social-button" 
+                        data-url="https://dhui626.github.io/index.php/archives/3/"
+                        data-title="个人网站 搭建记录 - dhui's Blog" 
+                        data-excerpt="记录笔者搭建本动态网页博客的全过程。"
+                        data-img="https://dhui626.github.io/pics/Colorful.jpg" 
+                        data-twitter="dhui"
+                        data-weibo="dhui"
+                        data-image="https://dhui626.github.io/pics/Colorful.jpg">
+                                                                            <a role=button 
+                                aria-label="为文章点赞" 
+                                id="social" 
+                                href="javascript:void(0);" onclick="VOID_Vote.vote(this);" 
+                                data-item-id="3" 
+                                data-type="up"
+                                data-table="content"
+                                class="btn btn-normal post-like vote-button"
+                            >ENJOY <span class="value">1</span>
+                            </a>
+                                                
+                        <a aria-label="分享到微博" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
+                        <a aria-label="分享到Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
+                    </div>
+                </article>
+
+                <script>
+                (function () {
+                    $.each($('iframe'), function(i, item){
+                        var src = $(item).attr('src');
+                        if (typeof src === 'string' && src.indexOf('player.bilibili.com') > -1) {
+                            // $(item).addClass('bili-player');
+                            // if (src.indexOf('&high_quality') < 0) {
+                            //     src += '&high_quality=1'; // 启用高质量
+                            //     $(item).attr('src', src);
+                            // }
+                            $(item).wrap('<div class="bili-player"></div>');
+                        }
+                    });
+                })();
+                </script>
+
+                <!--分页-->
+                                <div class="post-pager">                                            <div class="prev">
+                            <a href="https://dhui626.github.io/index.php/archives/1/"><h2>欢迎使用 Typecho</h2></a>
+                                                    </div>
+                                                                                    <div class="next">
+                            <a href="https://dhui626.github.io/index.php/archives/6/"><h2>测试数学公式</h2></a>
+                            <p>测试 MathJax 插件是否正确启用。</p>                        </div>
+                                    </div>
+                            </section>
+        </div> <!--end .contents-wrap-->
+        <!--目录，可选-->
+                    <div class="toc-mask" onclick="TOC.close();"></div>
+            <div aria-label="文章目录" class="TOC"></div>
+            <style>
+            #toggle-toc { display: block; }
+            </style>
+            </div>
+    <!--评论区，可选-->
+    
+<div class="comments-container float-up">
+    <section id="comments" class="container">
+        <!--评论框-->
+                    <script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-3'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-3'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+            <div id="respond-post-3" class="respond">
+                <div class="cancel-comment-reply" role=button>
+                    <a id="cancel-comment-reply-link" href="https://dhui626.github.io/index.php/archives/3/#respond-post-3" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>                </div>
+                <h3 id="response" class="widget-title text-left">添加新评论</h3>
+                                <form method="post" action="https://dhui626.github.io/index.php/archives/3/comment" id="comment-form">
+                                            <div class="comment-info-input">
+                        <input aria-label="称呼(必填)" type="text" name="author" id="author" required placeholder="称呼(必填)" value="" />
+                        <input aria-label="电子邮件(必填，将保密)" 
+                            type="email" name="mail" id="mail" 
+                            placeholder="电子邮件(必填，将保密)" 
+                            required                            value="" />
+                        <input aria-label="网站(选填)" type="url" name="url" id="url" 
+                                                        placeholder="网站(选填)"  
+                            value="" />
+                        </div>
+                                        <p style="margin-top:0">
+                        <textarea aria-label="评论输入框" class="input-area" rows="5" name="text" id="textarea" 
+                            placeholder="在这里输入你的评论..." 
+                            style="resize:none;"></textarea>
+                    </p>
+                    <p class="comment-buttons">
+                        <span class="OwO" aria-label="表情按钮" role="button"></span>
+                                                <button id="comment-submit-button" type="submit" class="submit btn btn-normal">提交评论</button>
+                    </p>
+                </form>
+            </div>
+                
+        <!--历史评论-->
+        <h3 class="comment-separator">
+            <div class="comment-tab-current">
+                                    <span class="comment-num">
+                        评论列表                    </span>
+                            </div>
+        </h3>
+            </section>
+</div></main>
+        <footer>
+            <div class="container wide">
+                <section>
+                    <p>© 2023  <span class="brand">dhui's Blog</span></p>
+                    <p>感谢陪伴：<span id="uptime"></span></p>
+                </section>
+                <section>
+                    <p>Powered by <a href="http://typecho.org/">Typecho</a> • <a href="https://blog.imalan.cn/archives/247/">Theme VOID</a></p>
+                    <p></p>
+                </section>
+            </div>
+        </footer>
+
+        <!--侧边控制按钮-->
+        <aside id="ctrler-panel">
+            <div class="ctrler-item" id="go-top">
+                <a target="_self" aria-label="返回顶部" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_SmoothScroller.scrollTo(0);"><i class="voidicon-up"></i></a>
+            </div>
+
+            
+            <div aria-label="展开或关闭设置面板" id="toggle-setting-pc" class="ctrler-item hidden-xs">
+                <a target="_self" href="javascript:void(0);" style="transform: translateX(-2px);" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+            </div>
+            <div aria-label="展开或关闭文章目录" class="ctrler-item" id="toggle-toc">
+                <a target="_self" href="javascript:void(0);" style="margin-left: -2px" onclick="TOC.toggle()"><i class="voidicon-left"></i></a>
+            </div>
+        </aside>
+
+        <!--站点设置面板-->
+        <aside hidden id="setting-panel">
+            <section>
+                <div id="toggle-night">
+                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();"><i></i></a>
+                </div>
+                <div id="adjust-text-container">
+                    <div class="adjust-text-item">
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(false);"><i class="voidicon-font"></i>-</a>
+                        <span id="current_textsize"></span>
+                        <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.adjustTextsize(true);"><i class="voidicon-font"></i>+</a>
+                    </div>
+                    <div class="adjust-text-item">
+                        <a target="_self" class="font-indicator  checked" href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, false);">Sans</a>
+                        <a target="_self" class="font-indicator " href="javascript:void(0)" onclick="VOID_Ui.toggleSerif(this, true);">Serif</a>
+                    </div>
+                </div>
+            </section>
+            <section id="links">
+                                    <a target="_self" class="link" href="javascript:void(0)" onclick="VOID_Ui.toggleLoginForm()"><i class="voidicon-user"></i></a>       
+                                <a class="link" title="RSS" target="_blank" href="https://dhui626.github.io/index.php/feed/"><i class="voidicon-rss"></i></a>
+                            </section>
+            <section id="login-panel" >
+                                    <form action="https://dhui626.github.io/index.php/action/login?_=afb7515259d2d97ccc419f36b0e733e4" id="loggin-form" method="post" name="login" role="form">
+                        <div id="loggin-inputs">
+                            <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required/>
+                            <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required/>
+                            <input type="hidden" name="referer" value="https://dhui626.github.io/index.php/archives/3/">
+                        </div>
+                        <div class="buttons" id="loggin-buttons">
+                            <button class="btn btn-normal" type="button" onclick="$('#login-panel').removeClass('show');$('#setting-panel').removeClass('show')">关闭</button>
+                            <button class="btn btn-normal" type="submit" onclick="VOID_Ui.rememberPos()">登录</button>
+                            <span hidden id="wait" class="btn btn-normal">请稍等……</span>
+                        </div>
+                    </form>
+                 
+            </section> 
+        </aside>
+
+                <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }}).catch(function(err) {
+                console.log('Service Worker registration failed: ', err);
+            });
+        }
+        </script>
+                <script data-manual src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/bundle-35ea1de458.js"></script>
+                <script src='https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/mathjax/2.7.4/MathJax.js'></script>
+                <script src="https://dhui626.github.io/usr/themes/VOID-nightly/assets/VOID-80b84c7780.js"></script>
+        <script>
+        if($(".OwO").length > 0){
+            new OwO({
+                logo: 'OωO',
+                container: document.getElementsByClassName('OwO')[0],
+                target: document.getElementsByClassName('input-area')[0],
+                api: 'https://dhui626.github.io/usr/themes/VOID-nightly/assets/libs/owo/OwO_03.json',
+                position: 'down',
+                width: '400px',
+                maxHeight: '250px'
+            });
+        }
+        </script>
+                    </body>
+</html>
