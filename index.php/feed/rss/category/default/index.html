@@ -11,6 +11,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description>只是一个默认分类</description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://dhui626.github.io/index.php/archives/71/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/51/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/25/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/24/"/>
@@ -21,6 +22,12 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://dhui626.github.io/index.php/archives/71/">
+<title>Blender 学习记录</title>
+<link>https://dhui626.github.io/index.php/archives/71/</link>
+<dc:date>2024-06-24T14:50:00+00:00</dc:date>
+<description>填坑，使用 Blender4.0 官网下载链接，参考Blender Guru 的教程文章主图是最终渲染图片。快捷方式鼠标滚轮按下: 调整视角Shift + 鼠标滚轮按下: 移动视角Shift + A: 添加物体G (grab): 移动物体G + X/Y/Z: 沿坐标轴X/Y/Z移动物体G + 鼠标滚轮按下: 沿某一坐标轴移动物体0: 摄像机视角N: 选项(常用于关掉那个窗口)S (scale) + X/Y/Z: 缩放物体R (rotate) + X/Y/Z: 旋转物体形状编辑网格细分：添加修改器 - 生成 - 表面细分 - 调节Catmull-Clark细分的层数编辑网格细节：选中物体 - 左上角物体模式 - 编辑模式 （快捷键Tab）衰减编辑：同时改变一系列点。滚轮控制点的范围（P2P变形的参数）切换透视模式：选框操作时可以选择物体背后的点解决网格重叠的渲染问题：修改器 - 生成 - 实体化 - 调节偏移量固定网格的部分点并隐藏：alt + 鼠标点击: 选中   ctrl + : 扩大范围  H: 隐藏添加新顶点：选中部分点，E + 鼠标拖动让网格顶点落在另一个网格上，而不重叠：修改器 - 形变 - 缩裹，并指定特定的目标雕刻模式：左上角切换，常用：膨胀(I) 抓起(G)遮罩(Mask)：快捷键 M，选定不进行雕刻的区域。Ctrl + I：反选。遮罩 - 平滑遮罩：将Mask平滑化。绑定两个物体：先选子对象（跟着父对象移动的），再选父对象，快捷键 Ctrl + P - 物体(保持变换)选中面 - Ctrl+B：斜面工具，常用于将尖锐的边光滑化，在编辑时操作滚轮控制层数。选中顶点 - Ctrl+R：在网格中建立细分修改器 - 形变 - 简易形变：将网格进行拉伸、缩小去除网格重复点：A(全选) + M(Merge) - 按距离移动物体时吸附：G + B，点击对应的点，过程中使用 Alt + 滚轮 调整视角重新计算法线：选中面 - Shift+N - 勾选向内材质与渲染材质 - 添加材质 - 修改颜色、糙度等等。材质下载：Poliigon，网站有 add-on 安装教程。Texture Paint：进行网格纹理的绘制，局部视图：快捷键 / 几何节点(Geometry Nodes)：对网格进行自定义修改，过于复杂。视频视图 - 裁剪起始：相机靠近物体太近时会穿过物体，调为最小(0.001m)可解决。Fly模式：Shift+`，第一人称视角观察，WASD移动/QE上升下降等更改物体不同部位的材质：建立多个材质环境光添加：World - 颜色 - 天空纹理亮度调节：Scene - 胶片 - 曝光度 （也可在环境光设置中调节）滤镜添加：渲染 - 色彩管理 - 胶片效果（）后处理：Compositing - 勾选“使用节点” - 添加节点(色彩平衡, etc)开始渲染：渲染 - 渲染动画(Ctrl + F12)景深设置：选中相机 - 勾选景深，并调节光圈级数动画I (insert): 添加关键帧曲线编辑：Animation - 曲线编辑器 - 编辑Bezier曲线曲线尺度的调整：HOME键 / Ctrl + 按下鼠标滚轮输出格式调整：输出 - 文件格式 - PNG（不建议直接生成视频，如果渲染中计算机意外重启可能丢失所有进度）视频生成文件 - 新建 - 视频编辑（或在当前项目中添加“视频编辑”工作区）输出 - 文件格式 - FFmpeg视频 - 编码设置等输出 - 后期处理 - 勾选序列编辑器（合成处理选项也可以在这里开关）添加 - 图像序列视频后处理Clipchamp : 剪辑视频，提取音频，提取字幕等分离人声 : https://vocalremover.org/</description>
+</item>
 <item rdf:about="https://dhui626.github.io/index.php/archives/51/">
 <title>B-spline 插值 自然边界条件证明</title>
 <link>https://dhui626.github.io/index.php/archives/51/</link>
@@ -83,7 +90,49 @@ $env:HTTPS_PROXY=&quot;localhost:7890&quot;上述代理服务器端口因设备�
 https_proxy     http://127.0.0.1:7890/CMake 时遇到网络问题：在 CMakeLists.txt 的前面添加如下代码set(ENV{http_proxy} &quot;http://127.0.0.1:7890&quot;)
 set(ENV{https_proxy} &quot;http://127.0.0.1:7890&quot;)项目配置CMake方法一：使用 CMake-GUI选择源代码位置、build 目录，只需 Configure、Generate、Open Project 三步。若出错则需要对应报错信息找错。大部分错误是找不到依赖库。方法二：使用 VS 内置新建一个空的 VS 项目，文件-打开-CMake，选中 CMakeLists.txt打开CMake设置-高级-CMake生成器-改为VS2022 Win64注意点请勿新建一个项目，然后将代码文件(.cpp .h等)加入项目，折磨且成功率低配置前确认项目可以在win环境生成，如某些依赖库只支持 Linux 系统，需要使用 WSL 生成字体YaHei Consolas Hybrid 1.12Fira Code命令行参数项目-属性-配置属性-调试-命令行参数包含目录出错无法打开源文件：fstream包含目录只要有一个错的，后面的包含目录都会出错。删去不正确的包含目录即可。Eigen 库使用svd 分解Eigen::JacobiSVD&lt;Eigen::Matrix3d&gt; svd(J, Eigen::ComputeFullU| Eigen::ComputeFullV);        Eigen::Matrix3d U = svd.matrixU();
 Eigen::Matrix3d S = svd.singularValues();
-Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.T</description>
+Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.TLearn C++学习链接：The Cherno的视频系列C++编程基础打开debug模式的代码优化：解决方案属性 - C/C++ - 优化 - 最大优化 、 代码生成 - 基本运行时检查 - 默认输出文件 - 汇编程序输出 - 仅有程序集的列表 (/FA)：可在 *.asm 文件查看输出的汇编程序。用这种方法可以查看常量是怎样被优化的。（比如：return 5 * 2 被优化成 mov    eax, 10）多行同时输入：alt+鼠标选中位置 或者 alt+shift+方向键选中当前单词：鼠标双击 或者 ctrl+W调试 - 窗口 - 内存：查看当前内存的内容。把想查看的变量拖到地址区域。（string 能看到一些有趣的内容）VS 的输出目录：$(SolutionDir)bin\$(Platform)\$(Configuration)\VS 多项目 library 使用：解决方案-添加-新建项目(编写lib)  添加附加包含目录  当前项目-添加-引用-选中 library 项目高级调试：右键添加条件或操作，并在输出中查看调试信息。预编译头：.cpp 属性 - C/C++ - 预编译头 - 创建； 项目属性 - 预编译头 - 使用； 预编译头文件 - .hVS 编译时间查看：选项 - 项目和解决方案 - 生成计时C++进阶内容类中定义的静态变量：就算创建了多个类元素也共享一个存储空间。C++ 防止创建类的实例：将构造函数写为 private。如 class Log { private:Log(); }; 或将构造函数写为 Log() = delete;C++ 初始化列表：采用如下写法 Player(const std::string&amp; name) : m_Name(name){} 。这种方法可以避免重复初始化，以及const常量只能这样初始化。虚函数写法：需要继承的类函数添加 virtual 前缀。纯虚函数：参考视频28protected : 当前类和派生类可访问到的变量new 关键词分配的内存：生存周期直到它被 delete 或者程序终止。static constexpr int size = 5;
+int example[size];  // 如果 size 是 const int 会报错std::string 文档：链接一些特殊的字符串定义方式：const wchar_t* chs = L&quot;dhui&quot;;
+const char16_t* chs2 = u&quot;dhui&quot;;
+const char32_t* chs3 = U&quot;dhui&quot;;
+using namespace std::string_literals; //C++14
+std::string name0 = &quot;Cherno&quot;s + &quot; hello&quot;; //这种写法允许字符串拼接
+const char* name2 = R&quot;(dhui
+dhui2)&quot;; //这种写法允许回车const int 不可以改变指针指向的内存数据。int const 不可以改变指针让它指向其他东西。mutable 变量：在 const 函数中也可以被更改explicit 关键字：写在类的构造函数前，不允许隐式类型转换std::cout &lt;&lt; 运算符重载：std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream, const Entity&amp; other) {
+    stream &lt;&lt; other.GetName() &lt;&lt; &quot;, &quot; &lt;&lt; other.GetAge();
+}智能指针(unique pointer) 与 共享指针(shared pointer) 与 弱指针(weak pointer)std::unique_ptr&lt;Entity&gt; entity(new Entity());
+std::shared_ptr&lt;Entity&gt; shardEntity = std::make_shared&lt;Entity&gt;();
+std::weak_ptr&lt;Entity&gt; e0 = shardEntity;获取类中的变量的offset：(int)&amp;((Vector3*)0)-&gt;x;Templete 写法：template&lt;typename T&gt;C++ 宏：可让代码在不同配置下执行不同的函数，如只让 Debug 模式输出调试信息。 反斜杠 \ 用于换行。为类型定义新的名称：using Devicemap = [type];
+typedef [type] Devicemapauto 关键字：传引用 auto&amp;函数指针：一种 confusing 的用法typedef void(*HelloworldFunction)(int); 
+HelloworldFunction function = Helloworld;STL模板库迭代 vector 元素的方法：for (Vertex&amp; v : vertices);  最好传引用删除一个 vector 元素：vertices.erase(vertices.begin() + 1);为 vector 预分配空间 vertices.reserve(3); （有别于resize，之后可以push_back）使用 vertices.emplace_back(1, 2, 3); 避免类重新被 copy constructor 构建array： std::array&lt;int,5&gt; data; 可以调用 data.size() 函数。在栈上开辟内存，而 vector 在堆上。Lambda 函数：参考。传入函数可能需要 std::function 。部分代码如下#include &lt;functional&gt;
+void print(int value, const std::function&lt;void(int)&gt;&amp; func) { func(value); }
+int a = 5; 
+auto lambda = [&amp;](int value) { std::cout &lt;&lt; &quot;Value:&quot; &lt;&lt; value &lt;&lt; &quot;\t a=&quot; &lt;&lt; a &lt;&lt; std::endl; };
+print(9, lambda);std::find_if 的一个应用示例：std::vector&lt;int&gt; values = { 1, 5, 4, 2, 3 }; 
+auto it = std::find_if(values.begin(), values.end(), [](int value) {return value &gt; 3; });std::map 与 std::unordered_map：建立两者的关系，类似数组。第一个必须是 hashable 的，如指针，否则要写个 hash 函数。遍历 std::map ：若要有序输出，对于第一个变量要有 operator&lt; 函数重载。视频演示for (auto&amp; [name, city] : cityMap){}  // C++17
+for (auto&amp; kv : cityMap){ kv.first; kv.second; } std::thread ：分出一个线程干别的事情，并继续后面的代码。std::thread worker(DoWork);
+// Do something
+worker.join();thread_local 关键字：让每个线程中创建一个实例，互不干扰。计时函数 Chronoauto start = std::chrono::high_resolution_clock::now();
+// Do something
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration&lt;float&gt; duration = end - start;
+std::cout &lt;&lt; &quot;Time = &quot; &lt;&lt; duration.count() &lt;&lt; std::endl;或者直接构建结构体，用于计时。在需计时的函数中创建变量 Timer timer; 注意 timer 的生存周期。struct Timer {
+    std::chrono::time_point&lt;std::chrono::steady_clock&gt; start, end;
+    std::chrono::duration&lt;float&gt; duration;
+    Timer() { 
+        start = std::chrono::high_resolution_clock::now(); 
+    }
+    ~Timer() {
+        end = std::chrono::high_resolution_clock::now();
+        duration = end - start;
+        std::cout &lt;&lt; &quot;Timer took = &quot; &lt;&lt; duration.count() * 1000.0f &lt;&lt; &quot;ms&quot; &lt;&lt; std::endl;
+    }
+};std::sort 时间复杂度：$O(NlogN)$static_cast / dynamic_cast ：后者会更加安全，涉及类的继承关系时可使用后者。多返回值: std::tuple / std::pair (后者仅允许双返回值)std::tuple&lt;std::string, int&gt; person = { &quot;Cherno&quot;, 24 }; //初始化
+std::string&amp; name = std::get&lt;0&gt;(person); //取元素
+std::tie(name, std::ignore) = person; //解包std::optional (C++17)std::optional&lt;int&gt; count = {};
+if (count.has_value()) {};  // 判断 count 有没有值
+int c = count.value_or(100); std::variant (C++17)std::variant&lt;std::string, int&gt; data;
+data = &quot;Cherno&quot;;
+data.index(); // 判断data的类型std::any (C++17) std::async 写法较复杂，但可以调试查看每个线程正在执行的任务(调试-&gt;窗口-&gt;并行堆栈) 视频参考std::string_view 用于读取string数据，而不用初始化stringbenchmarking: 生成 json 文件导入到 chrome://tracing 中， 代码完结于 2024.6.5，后续教程 (SINGLETON开始) 基本是 C++20 或是更加进阶的 C++ 技巧，需要用到的时候再针对性学习。</description>
 </item>
 <item rdf:about="https://dhui626.github.io/index.php/archives/23/">
 <title>Jellyfin 折腾记录</title>

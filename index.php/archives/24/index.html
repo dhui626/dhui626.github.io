@@ -8,20 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Visual Studio 踩坑记录 - dhui's Blog</title>
     <meta name="author" content="dhui" />
-    <meta name="description" content="Visual Studio 个人手册。
-更新中...." />
+    <meta name="description" content="Visual Studio 个人手册。" />
     <meta property="og:title" content="Visual Studio 踩坑记录 - dhui's Blog" />
-    <meta property="og:description" content="Visual Studio 个人手册。
-更新中...." />
+    <meta property="og:description" content="Visual Studio 个人手册。" />
     <meta property="og:site_name" content="Visual Studio 踩坑记录 - dhui's Blog" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://dhui626.github.io/index.php/archives/24/" />
     <meta property="og:image" content="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg" />
     <meta property="article:published_time" content="2023-10-28T17:04:00+00:00" />
-    <meta property="article:modified_time" content="2023-10-29T12:18:33+00:00" />
+    <meta property="article:modified_time" content="2024-11-13T16:45:44+00:00" />
     <meta name="twitter:title" content="Visual Studio 踩坑记录 - dhui's Blog" />
-    <meta name="twitter:description" content="Visual Studio 个人手册。
-更新中...." />
+    <meta name="twitter:description" content="Visual Studio 个人手册。" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
@@ -160,13 +157,12 @@
     "headline": "Visual Studio 踩坑记录 - dhui's Blog",
     "url": "https://dhui626.github.io/index.php/archives/24/",
     "datePublished": "2023-10-28T17:04:00+00:00",
-    "dateModified": "2023-10-29T12:18:33+00:00",
+    "dateModified": "2024-11-13T16:45:44+00:00",
     "image": {
         "@type": "ImageObject",
                 "url": "https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg"
     },
-    "description": "Visual Studio 个人手册。
-更新中....",
+    "description": "Visual Studio 个人手册。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://dhui626.github.io/index.php/"
@@ -189,7 +185,7 @@
                                             <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
                         <time datetime="2023-10-28T17:04:00+00:00">2023-10-28</time>
                         &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
-                        &nbsp;•&nbsp;<span>61&nbsp;阅读</span>                                                            </p>
+                        &nbsp;•&nbsp;<span>70&nbsp;阅读</span>                                                            </p>
                     </div>
     </div>
     <div class="wrapper container">
@@ -197,6 +193,7 @@
             <section id="post" class="float-up">
                 <article class="post yue">
 
+                                            <p class="notice">请注意，本文编写于 382 天前，最后修改于 0 天前，其中某些信息可能已经过时。</p>
                     
                     <div class="articleBody" class="full">
                         <p>运行环境：Windows 10 22H2 x64 + Visual Studio 2022</p><h2 id="toc_0">vcpkg</h2><p>vcpkg 是 Microsoft 的跨平台开源软件包管理器，极大地简化了 Windows、Linux 和 macOS 上第三方库的配置与安装。<a href="https://vcpkg.io/">官网</a></p><h3 id="toc_1">配置教程</h3><p><strong>Step 1: 从 GitHub 克隆 vcpkg</strong></p><pre><code>git clone https://github.com/Microsoft/vcpkg.git
@@ -209,14 +206,55 @@ $env:HTTPS_PROXY=&quot;localhost:7890&quot;</code></pre><p>上述代理服务器
 https_proxy     http://127.0.0.1:7890/</code></pre><p>CMake 时遇到网络问题：在 CMakeLists.txt 的前面添加如下代码</p><pre><code>set(ENV{http_proxy} &quot;http://127.0.0.1:7890&quot;)
 set(ENV{https_proxy} &quot;http://127.0.0.1:7890&quot;)</code></pre><h2 id="toc_5">项目配置</h2><h3 id="toc_6">CMake</h3><p><strong>方法一</strong>：使用 CMake-GUI</p><p>选择源代码位置、build 目录，只需 Configure、Generate、Open Project 三步。</p><p>若出错则需要对应报错信息找错。大部分错误是找不到依赖库。</p><p><strong>方法二</strong>：使用 VS 内置</p><p>新建一个空的 VS 项目，文件-打开-CMake，选中 CMakeLists.txt</p><p>打开CMake设置-高级-CMake生成器-改为VS2022 Win64</p><h3 id="toc_7">注意点</h3><ol><li>请勿新建一个项目，然后将代码文件(.cpp .h等)加入项目，折磨且成功率低</li><li>配置前确认项目可以在win环境生成，如某些依赖库只支持 Linux 系统，需要使用 WSL 生成</li></ol><h3 id="toc_8">字体</h3><p>YaHei Consolas Hybrid 1.12</p><p>Fira Code</p><h3 id="toc_9">命令行参数</h3><p>项目-属性-配置属性-调试-命令行参数</p><h3 id="toc_10">包含目录出错</h3><p>无法打开源文件：fstream</p><p>包含目录只要有一个错的，后面的包含目录都会出错。</p><p>删去不正确的包含目录即可。</p><h2 id="toc_11">Eigen 库使用</h2><p>svd 分解</p><pre><code class="lang-cpp">Eigen::JacobiSVD&lt;Eigen::Matrix3d&gt; svd(J, Eigen::ComputeFullU| Eigen::ComputeFullV);        Eigen::Matrix3d U = svd.matrixU();
 Eigen::Matrix3d S = svd.singularValues();
-Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.T</code></pre>                    </div>
+Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.T</code></pre><h2 id="toc_12">Learn C++</h2><p>学习链接：<a href="https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb"><strong>The Cherno</strong>的视频系列</a></p><h3 id="toc_13">C++编程基础</h3><p>打开debug模式的代码优化：解决方案属性 - C/C++ - 优化 - 最大优化 、 代码生成 - 基本运行时检查 - 默认</p><p>输出文件 - 汇编程序输出 - 仅有程序集的列表 (/FA)：可在 *.asm 文件查看输出的汇编程序。用这种方法可以查看常量是怎样被优化的。（比如：<code>return 5 * 2</code> 被优化成 <code>mov    eax, 10</code>）</p><p>多行同时输入：alt+鼠标选中位置 或者 alt+shift+方向键</p><p>选中当前单词：鼠标双击 或者 ctrl+W</p><p>调试 - 窗口 - 内存：查看当前内存的内容。把想查看的变量拖到地址区域。（string 能看到一些有趣的内容）</p><p>VS 的输出目录：<code>$(SolutionDir)bin\$(Platform)\$(Configuration)\</code></p><p>VS 多项目 library 使用：解决方案-添加-新建项目(编写lib)  添加附加包含目录  当前项目-添加-引用-选中 library 项目</p><p>高级调试：右键添加<strong>条件</strong>或<strong>操作</strong>，并在输出中查看调试信息。</p><p>预编译头：<em>.cpp 属性 - C/C++ - 预编译头 - 创建； 项目属性 - 预编译头 - 使用； 预编译头文件 - </em>.h</p><p>VS 编译时间查看：选项 - 项目和解决方案 - 生成计时</p><h3 id="toc_14">C++进阶内容</h3><p>类中定义的静态变量：就算创建了多个类元素也共享一个存储空间。</p><p>C++ 防止创建类的实例：将构造函数写为 private。如 <code>class Log { private:Log(); };</code> 或将构造函数写为 <code>Log() = delete;</code></p><p>C++ 初始化列表：采用如下写法 <code>Player(const std::string&amp; name) : m_Name(name){}</code> 。这种方法可以避免重复初始化，以及const常量只能这样初始化。</p><p>虚函数写法：需要继承的类函数添加 virtual 前缀。纯虚函数：参考视频28</p><p>protected : 当前类和派生类可访问到的变量</p><p>new 关键词分配的内存：生存周期直到它被 delete 或者程序终止。</p><pre><code class="lang-cpp">static constexpr int size = 5;
+int example[size];  // 如果 size 是 const int 会报错</code></pre><p>std::string 文档：<a href="https://cplusplus.com/reference/string/string/">链接</a></p><p>一些特殊的字符串定义方式：</p><pre><code class="lang-cpp">const wchar_t* chs = L&quot;dhui&quot;;
+const char16_t* chs2 = u&quot;dhui&quot;;
+const char32_t* chs3 = U&quot;dhui&quot;;
+using namespace std::string_literals; //C++14
+std::string name0 = &quot;Cherno&quot;s + &quot; hello&quot;; //这种写法允许字符串拼接
+const char* name2 = R&quot;(dhui
+dhui2)&quot;; //这种写法允许回车</code></pre><p>const int<em> 不可以改变指针指向的内存数据。int</em> const 不可以改变指针让它指向其他东西。</p><p>mutable 变量：在 const 函数中也可以被更改</p><p>explicit 关键字：写在类的构造函数前，不允许隐式类型转换</p><p>std::cout &lt;&lt; 运算符重载：</p><pre><code class="lang-cpp">std::ostream&amp; operator&lt;&lt;(std::ostream&amp; stream, const Entity&amp; other) {
+    stream &lt;&lt; other.GetName() &lt;&lt; &quot;, &quot; &lt;&lt; other.GetAge();
+}</code></pre><p>智能指针(unique pointer) 与 共享指针(shared pointer) 与 弱指针(weak pointer)</p><pre><code class="lang-cpp">std::unique_ptr&lt;Entity&gt; entity(new Entity());
+std::shared_ptr&lt;Entity&gt; shardEntity = std::make_shared&lt;Entity&gt;();
+std::weak_ptr&lt;Entity&gt; e0 = shardEntity;</code></pre><p>获取类中的变量的offset：<code>(int)&amp;((Vector3*)0)-&gt;x;</code></p><p>Templete 写法：<code>template&lt;typename T&gt;</code></p><p>C++ 宏：可让代码在不同配置下执行不同的函数，如只让 Debug 模式输出调试信息。 反斜杠 <code>\</code> 用于换行。</p><p>为类型定义新的名称：</p><pre><code class="lang-cpp">using Devicemap = [type];
+typedef [type] Devicemap</code></pre><p>auto 关键字：传引用 <code>auto&amp;</code></p><p>函数指针：一种 confusing 的用法</p><pre><code class="lang-cpp">typedef void(*HelloworldFunction)(int); 
+HelloworldFunction function = Helloworld;</code></pre><h3 id="toc_15">STL模板库</h3><p>迭代 vector 元素的方法：<code>for (Vertex&amp; v : vertices);</code>  最好传引用</p><p>删除一个 vector 元素：<code>vertices.erase(vertices.begin() + 1);</code></p><p>为 vector 预分配空间 <code>vertices.reserve(3);</code> （有别于resize，之后可以push_back）</p><p>使用 <code>vertices.emplace_back(1, 2, 3);</code> 避免类重新被 copy constructor 构建</p><p>array： <code>std::array&lt;int,5&gt; data;</code> 可以调用 <code>data.size()</code> 函数。在<strong>栈</strong>上开辟内存，而 vector 在<strong>堆</strong>上。</p><p>Lambda 函数：<a href="https://en.cppreference.com/w/cpp/language/lambda">参考</a>。传入函数可能需要 std::function 。部分代码如下</p><pre><code class="lang-cpp">#include &lt;functional&gt;
+void print(int value, const std::function&lt;void(int)&gt;&amp; func) { func(value); }
+int a = 5; 
+auto lambda = [&amp;](int value) { std::cout &lt;&lt; &quot;Value:&quot; &lt;&lt; value &lt;&lt; &quot;\t a=&quot; &lt;&lt; a &lt;&lt; std::endl; };
+print(9, lambda);</code></pre><p>std::find_if 的一个应用示例：</p><pre><code class="lang-cpp">std::vector&lt;int&gt; values = { 1, 5, 4, 2, 3 }; 
+auto it = std::find_if(values.begin(), values.end(), [](int value) {return value &gt; 3; });</code></pre><p>std::map 与 std::unordered_map：建立两者的关系，类似数组。第一个必须是 hashable 的，如指针，否则要写个 hash 函数。</p><p>遍历 std::map ：若要有序输出，对于第一个变量要有 operator&lt; 函数重载。<a href="https://www.youtube.com/watch?v=KiB0vRi2wlc">视频演示</a></p><pre><code class="lang-cpp">for (auto&amp; [name, city] : cityMap){}  // C++17
+for (auto&amp; kv : cityMap){ kv.first; kv.second; } </code></pre><p>std::thread ：分出一个线程干别的事情，并继续后面的代码。</p><pre><code class="lang-cpp">std::thread worker(DoWork);
+// Do something
+worker.join();</code></pre><p>thread_local 关键字：让每个线程中创建一个实例，互不干扰。</p><p>计时函数 Chrono</p><pre><code class="lang-cpp">auto start = std::chrono::high_resolution_clock::now();
+// Do something
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration&lt;float&gt; duration = end - start;
+std::cout &lt;&lt; &quot;Time = &quot; &lt;&lt; duration.count() &lt;&lt; std::endl;</code></pre><p>或者直接构建结构体，用于计时。在需计时的函数中创建变量 <code>Timer timer;</code> 注意 timer 的生存周期。</p><pre><code class="lang-cpp">struct Timer {
+    std::chrono::time_point&lt;std::chrono::steady_clock&gt; start, end;
+    std::chrono::duration&lt;float&gt; duration;
+    Timer() { 
+        start = std::chrono::high_resolution_clock::now(); 
+    }
+    ~Timer() {
+        end = std::chrono::high_resolution_clock::now();
+        duration = end - start;
+        std::cout &lt;&lt; &quot;Timer took = &quot; &lt;&lt; duration.count() * 1000.0f &lt;&lt; &quot;ms&quot; &lt;&lt; std::endl;
+    }
+};</code></pre><p>std::sort 时间复杂度：$O(NlogN)$</p><p>static_cast / dynamic_cast ：后者会更加安全，涉及类的继承关系时可使用后者。</p><p>多返回值: std::tuple / std::pair (后者仅允许双返回值)</p><pre><code class="lang-cpp">std::tuple&lt;std::string, int&gt; person = { &quot;Cherno&quot;, 24 }; //初始化
+std::string&amp; name = std::get&lt;0&gt;(person); //取元素
+std::tie(name, std::ignore) = person; //解包</code></pre><p>std::optional (C++17)</p><pre><code class="lang-cpp">std::optional&lt;int&gt; count = {};
+if (count.has_value()) {};  // 判断 count 有没有值
+int c = count.value_or(100); </code></pre><p>std::variant (C++17)</p><pre><code class="lang-cpp">std::variant&lt;std::string, int&gt; data;
+data = &quot;Cherno&quot;;
+data.index(); // 判断data的类型</code></pre><p>std::any (C++17) </p><p>std::async 写法较复杂，但可以调试查看每个线程正在执行的任务(调试-&gt;窗口-&gt;并行堆栈) <a href="https://www.youtube.com/watch?v=5HWCsmE9DrE">视频参考</a></p><p>std::string_view 用于读取string数据，而不用初始化string</p><p>benchmarking: 生成 json 文件导入到 <code>chrome://tracing</code> 中， <a href="https://gist.github.com/TheCherno/31f135eea6ee729ab5f26a6908eb3a5e">代码</a></p><p><strong>完结于 2024.6.5</strong>，后续教程 (SINGLETON开始) 基本是 C++20 或是更加进阶的 C++ 技巧，需要用到的时候再针对性学习。</p>                    </div>
                     
                     
                     <div class="social-button" 
                         data-url="https://dhui626.github.io/index.php/archives/24/"
                         data-title="Visual Studio 踩坑记录 - dhui's Blog" 
-                        data-excerpt="Visual Studio 个人手册。
-更新中...."
+                        data-excerpt="Visual Studio 个人手册。"
                         data-img="https://dhui626.github.io/pics/Kimi to Iu Tokuiten.jpg" 
                         data-twitter="dhui"
                         data-weibo="dhui"
@@ -386,7 +424,7 @@ Eigen::Matrix3d V = svd.matrixV();  //J = U * S * V.T</code></pre>              
         <footer>
             <div class="container wide">
                 <section>
-                    <p>© 2023  <span class="brand">dhui's Blog</span></p>
+                    <p>© 2024  <span class="brand">dhui's Blog</span></p>
                     <p>感谢陪伴：<span id="uptime"></span></p>
                 </section>
                 <section>
