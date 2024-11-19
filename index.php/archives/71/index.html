@@ -185,7 +185,7 @@
                                             <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
                         <time datetime="2024-06-24T14:50:00+00:00">2024-06-24</time>
                         &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
-                        &nbsp;•&nbsp;<span>4&nbsp;阅读</span>                                                            </p>
+                        &nbsp;•&nbsp;<span>5&nbsp;阅读</span>                                                            </p>
                     </div>
     </div>
     <div class="wrapper container">
@@ -193,7 +193,7 @@
             <section id="post" class="float-up">
                 <article class="post yue">
 
-                                            <p class="notice">请注意，本文编写于 142 天前，最后修改于 0 天前，其中某些信息可能已经过时。</p>
+                                            <p class="notice">请注意，本文编写于 148 天前，最后修改于 6 天前，其中某些信息可能已经过时。</p>
                     
                     <div class="articleBody" class="full">
                         <p>填坑，使用 Blender4.0 <a href="https://www.blender.org/download/">官网下载链接</a>，参考<a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z">Blender Guru 的教程</a></p><h2 id="toc_0">文章主图是最终渲染图片。</h2><h3 id="toc_1">快捷方式</h3><p>鼠标滚轮按下: 调整视角</p><p>Shift + 鼠标滚轮按下: 移动视角</p><p>Shift + A: 添加物体</p><p>G (grab): 移动物体</p><p>G + X/Y/Z: 沿坐标轴X/Y/Z移动物体</p><p>G + 鼠标滚轮按下: 沿某一坐标轴移动物体</p><p>0: 摄像机视角</p><p>N: 选项(常用于关掉那个窗口)</p><p>S (scale) + X/Y/Z: 缩放物体</p><p>R (rotate) + X/Y/Z: 旋转物体</p><h3 id="toc_2">形状编辑</h3><p>网格细分：添加修改器 - 生成 - 表面细分 - 调节Catmull-Clark细分的层数</p><p>编辑网格细节：选中物体 - 左上角物体模式 - 编辑模式 （快捷键Tab）</p><p>衰减编辑：同时改变一系列点。滚轮控制点的范围（P2P变形的参数）</p><p>切换透视模式：选框操作时可以选择物体背后的点</p><p>解决网格重叠的渲染问题：修改器 - 生成 - 实体化 - 调节偏移量</p><p>固定网格的部分点并隐藏：alt + 鼠标点击: 选中   ctrl + : 扩大范围  H: 隐藏</p><p>添加新顶点：选中部分点，E + 鼠标拖动</p><p>让网格顶点落在另一个网格上，而不重叠：修改器 - 形变 - 缩裹，并指定特定的目标</p><p>雕刻模式：左上角切换，常用：膨胀(I) 抓起(G)</p><p>遮罩(Mask)：快捷键 M，选定不进行雕刻的区域。Ctrl + I：反选。遮罩 - 平滑遮罩：将Mask平滑化。</p><p>绑定两个物体：先选子对象（跟着父对象移动的），再选父对象，快捷键 Ctrl + P - 物体(保持变换)</p><p>选中面 - Ctrl+B：斜面工具，常用于将尖锐的边光滑化，在编辑时操作滚轮控制层数。</p><p>选中顶点 - Ctrl+R：在网格中建立细分</p><p>修改器 - 形变 - 简易形变：将网格进行拉伸、缩小</p><p>去除网格重复点：A(全选) + M(Merge) - 按距离</p><p>移动物体时吸附：G + B，点击对应的点，过程中使用 Alt + 滚轮 调整视角</p><p>重新计算法线：选中面 - Shift+N - 勾选向内</p><h3 id="toc_3">材质与渲染</h3><p>材质 - 添加材质 - 修改颜色、糙度等等。</p><p>材质下载：<a href="https://www.poliigon.com/">Poliigon</a>，网站有 add-on 安装教程。</p><p>Texture Paint：进行网格纹理的绘制，局部视图：快捷键 / </p><p>几何节点(Geometry Nodes)：对网格进行自定义修改，过于复杂。<a href="https://www.youtube.com/watch?v=TLrA6eJOfqk">视频</a></p><p>视图 - 裁剪起始：相机靠近物体太近时会穿过物体，调为最小(0.001m)可解决。</p><p>Fly模式：Shift+`，第一人称视角观察，WASD移动/QE上升下降等</p><p>更改物体不同部位的材质：建立多个材质</p><p>环境光添加：World - 颜色 - 天空纹理</p><p>亮度调节：Scene - 胶片 - 曝光度 （也可在环境光设置中调节）</p><p>滤镜添加：渲染 - 色彩管理 - 胶片效果（）</p><p>后处理：Compositing - 勾选“使用节点” - 添加节点(色彩平衡, etc)</p><p>开始渲染：渲染 - 渲染动画(Ctrl + F12)</p><p>景深设置：选中相机 - 勾选景深，并调节光圈级数</p><h3 id="toc_4">动画</h3><p>I (insert): 添加关键帧</p><p>曲线编辑：Animation - 曲线编辑器 - 编辑Bezier曲线</p><p>曲线尺度的调整：HOME键 / Ctrl + 按下鼠标滚轮</p><p>输出格式调整：输出 - 文件格式 - PNG（不建议直接生成视频，如果渲染中计算机意外重启可能丢失所有进度）</p><p><strong>视频生成</strong></p><p>文件 - 新建 - 视频编辑（或在当前项目中添加“视频编辑”工作区）</p><p>输出 - 文件格式 - FFmpeg视频 - 编码设置等</p><p>输出 - 后期处理 - 勾选序列编辑器（合成处理选项也可以在这里开关）</p><p>添加 - 图像序列</p><p><strong>视频后处理</strong></p><p><a href="https://app.clipchamp.com/">Clipchamp</a> : 剪辑视频，提取音频，提取字幕等</p><p>分离人声 : <a href="https://vocalremover.org/">https://vocalremover.org/</a></p>                    </div>
@@ -244,8 +244,8 @@
                             <a href="https://dhui626.github.io/index.php/archives/51/"><h2>B-spline 插值 自然边界条件证明</h2></a>
                             <p>四阶(三次) B-spline 插值 的自然边界条件证明</p>                        </div>
                                                                                     <div class="next">
-                            <h2>没有了</h2>
-                        </div>
+                            <a href="https://dhui626.github.io/index.php/archives/73/"><h2>基于 OpenGL 的 Minecraft 世界渲染器</h2></a>
+                            <p>Minecraft Mini Renderer 项目展示页</p>                        </div>
                                     </div>
                             </section>
         </div> <!--end .contents-wrap-->

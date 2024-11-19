@@ -11,6 +11,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 <description>こっちみんな！</description>
 <items>
 <rdf:Seq>
+<rdf:li resource="https://dhui626.github.io/index.php/archives/73/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/71/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/51/"/>
 <rdf:li resource="https://dhui626.github.io/index.php/archives/25/"/>
@@ -22,6 +23,12 @@ xmlns:dc="http://purl.org/dc/elements/1.1/">
 </rdf:Seq>
 </items>
 </channel>
+<item rdf:about="https://dhui626.github.io/index.php/archives/73/">
+<title>基于 OpenGL 的 Minecraft 世界渲染器</title>
+<link>https://dhui626.github.io/index.php/archives/73/</link>
+<dc:date>2024-11-19T15:32:38+00:00</dc:date>
+<description>本页面用于项目《基于 OpenGL 的 Minecraft 世界渲染器》展示。渲染器基于 C++ 与 OpenGL，由本人独立完成。（2024.10.1~至今）截至目前的最终渲染结果如下Final下面按时间顺序来展示各阶段进行的工作与结果。OpenGL 基础功能一切的开始！起初这只是一个 OpenGL 学习项目（直到现在项目目录都是LearnOpenGL）Stage1-1用 OpenGL 渲染一个草方块，并编写 shader 应用 Blinn-Phong 光照模型。后面发现了很多问题并修正：纹理图案在边界处异常，原因是下载的纹理图案有模糊处理，替换成原图后正常。当时实现的实际是 Phong 光照模型，specular 分量的计算未用到半程向量，后修正（顺便一提，GAMES202 的作业框架也存在此错误，且作业1中 specular 颜色值传入了 0，实际计算出的 specular 分量为 0，可能就因此没被助教们发现？）Stage1-2实现基于 Perlin 噪声的区块生成器，并启用 ImGui 进行调试。场景中只有单个区块(32×32)。至此性能问题就被充分暴露了：由于我每个方块都调用了一次draw call，因此上面的简单场景也只有10hz，如果场景中有多个区块将是个灾难。性能优化主要的优化步骤总结为如下三步：每个区块类内维护一个 VAO，在渲染该区块时只执行一次draw call只对接触到空气的面加入到 vertex 和 indices 数组，实际很多面不需要绘制（藏在泥土中的，以及两个相邻方块的接触面）。启用背面剔除在解决了以上问题后，可以生成多个区块了，并加入了 GAMES202 中介绍的阴影算法（shadow map, PCF, PCSS）Stage2-1在图下方的方块边缘处阴影缺了一块，这与修复 Shadow Acne 设置的 bias 有关。Stage2-2修正世界生成逻辑，改用 Simplex 噪声，并添加了花草，结果如上图。考虑到花草和方块的渲染逻辑不同，后续也会使用不同的 shader ，本人将代码进行了重构。重构后一个区块可拥有多个 VAO ，且花草、方块以及后面加入的水面可以用不同的 shader 来渲染。Stage2-3加入水方块，并对水流使用不同的渲染逻辑(透明物体最后渲染)，并在 vertex shader 中模拟水的流动(Gerstner waves)后处理后处理主要在屏幕空间完成，即利用 FBO 的渲染结果以及深度进行图像处理。Stage3-1水上雾化效果和水中漫游效果(Screen Space Fog)，利用 FBO 的深度值来计算混合颜色。Stage3-2Bloom效果展示。除此之外，还加入了以下调节：亮度、对比度、饱和度、锐度(已移除)、Gamma校正等Stage3-3Tone Mapping，实现并比较了各种方法的结果，个人比较喜欢 CE 和 Filmic 。总结以上就是本人的 Minecraft Mini Renderer 的暂时进展。后续会加入更多内容，如 Cascade Shadow Map，MSAA，玩家模型等，本页面也将持续更新。GitHub 链接（可能是private）：https://github.com/dhui626/LearnOpenGLGit</description>
+</item>
 <item rdf:about="https://dhui626.github.io/index.php/archives/71/">
 <title>Blender 学习记录</title>
 <link>https://dhui626.github.io/index.php/archives/71/</link>
