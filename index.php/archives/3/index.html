@@ -185,7 +185,7 @@
                                             <span><a href="https://dhui626.github.io/index.php/author/1/">dhui</a></span>&nbsp;•&nbsp;
                         <time datetime="2023-10-26T15:11:00+00:00">2023-10-26</time>
                         &nbsp;•&nbsp;<a no-pjax target="_self" href="javascript:void(0);" onclick="VOID_SmoothScroller.scrollTo('#comments', -60)">0&nbsp;评论</a>
-                        &nbsp;•&nbsp;<span>73&nbsp;阅读</span>                                                            </p>
+                        &nbsp;•&nbsp;<span>74&nbsp;阅读</span>                                                            </p>
                     </div>
     </div>
     <div class="wrapper container">
@@ -193,7 +193,7 @@
             <section id="post" class="float-up">
                 <article class="post yue">
 
-                                            <p class="notice">请注意，本文编写于 390 天前，最后修改于 385 天前，其中某些信息可能已经过时。</p>
+                                            <p class="notice">请注意，本文编写于 391 天前，最后修改于 386 天前，其中某些信息可能已经过时。</p>
                     
                     <div class="articleBody" class="full">
                         <h1>个人网站 搭建记录</h1><p>运行环境：Windows 10 22H2</p><p>软件版本：Apache 2.4 + PHP 8.2.12 + MySQL 8.2.0</p><h2 id="toc_0">搭建教程</h2><p>准备安装 Typecho 进行搭建网页测试。下载下来没有html，诶??? php 是什么啊，打开怎么是源码啊。</p><p>此处省略一万字，去学习了静态网页和动态网页的区别。</p><p><strong>安装 php 环境</strong></p><p>首先安装 php 环境，在 Windows 系统下有集成式安装软件 Wampserver，一键安装。</p><p>但是这东西又丑又卡，还不断弹出 cmd 窗口让我觉得是病毒软件，虽然在上面搭建成功了但也反手卸载了。</p><p>不如自己动手安装！</p><p>参考教程：<a href="https://zhuanlan.zhihu.com/p/123960715">记一次windows配置PHP环境</a>。</p><p>难得的优质教程，跟着他的教程来基本没有搜索别的内容了。</p><h3 id="toc_1"><strong>1 安装Apache2.4</strong></h3><p>1.1 Apache 的下载链接 <a href="https://httpd.apache.org/download.cgi">The Apache HTTP Server Project</a></p><p>1.2 点击 a number of third party vendors 下载 windows 版本</p><p>1.3 选择 ApacheHaus</p><p>1.4 选择 x64 的版本下载</p><p>1.5 建立个人主页文件夹 Home，将下载的 apache 解压到其中。</p><p>1.6 用记事本打开 conf 中的 httpd.conf，找到如下代码段</p><pre><code>Define SRVROOT &quot;/Apache24&quot;
